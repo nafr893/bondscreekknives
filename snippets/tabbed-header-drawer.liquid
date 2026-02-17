@@ -74,14 +74,16 @@
      {%- comment -%} Tab Panels {%- endcomment -%}
      <div class="tabbed-drawer__panels">
        {% for tab in tabs %}
-         {% render 'tabbed-drawer-panel',
-           tab: tab,
-           linklist: linklist,
-           active_tab: active_tab,
-           block: block,
-           section: section,
-           block_settings: block_settings
-         %}
+         {% unless tab == 'new' %}
+           {% render 'tabbed-drawer-panel',
+             tab: tab,
+             linklist: linklist,
+             active_tab: active_tab,
+             block: block,
+             section: section,
+             block_settings: block_settings
+           %}
+         {% endunless %}
        {% endfor %}
      </div>
 
