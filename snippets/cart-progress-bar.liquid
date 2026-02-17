@@ -1,0 +1,78 @@
+{%- liquid
+ assign free_shipping_threshold = settings.free_shipping_amount | default: 20000
+ assign cart_total = cart.total_price
+ assign progress_percent = cart_total | times: 100 | divided_by: free_shipping_threshold
+ assign remaining_amount = free_shipping_threshold | minus: cart_total
+  if progress_percent > 100
+   assign progress_percent = 100
+ endif
+-%}
+
+
+<div class="cart-progress">
+ {% if cart_total >= free_shipping_threshold %}
+   <p class="cart-progress__message">You’ve unlocked Free Shipping!</p>
+ {% else %}
+   <p class="cart-progress__message">
+     You're <span class="highlight" >{{ remaining_amount | money_without_trailing_zeros }} </span> away from <span class="highlight">Free Shipping</span>
+   </p>
+ {% endif %}
+
+
+ <div class="cart-progress__bar">
+   <div
+     class="cart-progress__fill"
+     style="width: {{ progress_percent }}%;">
+   </div>
+ </div>
+</div>
+
+
+<style>
+.cart-progress {
+ margin: 16px 0;
+ padding-left: 20px;
+ padding-right: 20px;
+ display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border-top: 0px solid #d9d9d9;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-bottom: 10px;   
+background: #f9f9f9;
+
+}
+
+
+.cart-progress__message {
+ font-size: 14px;
+ margin-bottom: 6px;
+ text-align: center;
+ padding-bottom: 5px;
+
+
+ .highlight {
+   font-weight: bold;
+ }
+}
+
+
+
+
+.cart-progress__bar {
+ background: #d5d5d5;
+ height: 5px;
+ border-radius: 2px;
+ overflow: hidden;
+}
+
+
+.cart-progress__fill {
+ height: 100%;
+ background: #000000;
+ width: 0%;
+ transition: width 0.1s ease;
+}
+</style>
+
