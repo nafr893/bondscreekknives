@@ -527,11 +527,53 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "slide_product_showcase_4c99wi": {
+      "type": "slide-product-showcase",
+      "blocks": {
+        "slide_JJD8JK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/BCK-6589.webp",
+            "image_alt": "",
+            "product": "predator-cinder"
+          }
+        },
+        "slide_AzPYbK": {
+          "type": "slide",
+          "settings": {
+            "image_alt": "",
+            "product": ""
+          }
+        },
+        "slide_xAiBA9": {
+          "type": "slide",
+          "settings": {
+            "image_alt": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_JJD8JK",
+        "slide_AzPYbK",
+        "slide_xAiBA9"
+      ],
+      "name": "Hero + Product Slideshow",
+      "settings": {
+        "show_controls": true,
+        "max_width": 1200,
+        "radius": 20,
+        "gap": 0,
+        "card_radius": 0,
+        "card_padding": 18
+      }
     }
   },
   "order": [
     "hero_jVaWmY",
     "product_list_fa6P9H",
-    "collection_list_8GqKHQ"
+    "collection_list_8GqKHQ",
+    "slide_product_showcase_4c99wi"
   ]
 }
