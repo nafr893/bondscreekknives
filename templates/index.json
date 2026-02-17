@@ -542,22 +542,15 @@
         "slide_AzPYbK": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/BCK-6663.webp",
             "image_alt": "",
-            "product": ""
-          }
-        },
-        "slide_xAiBA9": {
-          "type": "slide",
-          "settings": {
-            "image_alt": "",
-            "product": ""
+            "product": "predator-timberline"
           }
         }
       },
       "block_order": [
         "slide_JJD8JK",
-        "slide_AzPYbK",
-        "slide_xAiBA9"
+        "slide_AzPYbK"
       ],
       "name": "Hero + Product Slideshow",
       "settings": {
