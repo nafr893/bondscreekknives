@@ -63,6 +63,8 @@
     "cart_price_font": "secondary",
     "show_cart_note": false,
     "show_add_discount_code": true,
+    "show_installments": false,
+    "show_accelerated_checkout_buttons": false,
     "empty_cart_banner_1_image": "shopify://shop_images/BCK-6576.webp",
     "empty_cart_banner_1_text": "KNIVES",
     "empty_cart_banner_1_link": "shopify://collections/knives",
