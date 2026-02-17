@@ -14,9 +14,9 @@ svg#Account_Icon_V1_Image {
 section#shopify-section-template--19665974722630__hero_jVaWmY {
     display: none; 
 }
+.card-drawer_header {
+        padding-bottom: 10px !important;
 
+}
 
  }
-div#cart-drawer__header.cart-drawer__header {
-    padding-bottom: 10px !important; 
-}
