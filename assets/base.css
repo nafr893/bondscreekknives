@@ -3235,7 +3235,6 @@ label:has(input[type='checkbox']:disabled) {
 }
 
 .cart-bubble[data-maintain-ratio] .cart-bubble__background {
-  border-radius: var(--style-border-radius-50);
 }
 
 .cart-bubble__background {
