@@ -1,3 +1,8 @@
+.cart-drawer_header {
+        padding-bottom: 10px !important;
+
+}
+
 h1, h2, h3, h4 {
     font-family: nudista-web, sans-serif !important;
 
@@ -14,9 +19,6 @@ svg#Account_Icon_V1_Image {
 section#shopify-section-template--19665974722630__hero_jVaWmY {
     display: none; 
 }
-.card-drawer_header {
-        padding-bottom: 10px !important;
 
-}
 
  }
