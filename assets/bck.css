@@ -15,7 +15,7 @@ section#shopify-section-template--19665974722630__hero_jVaWmY {
     display: none; 
 }
 
-div#cart-drawer__header {
+div#cart-drawer__header.cart-drawer__header {
     padding-bottom: 10px !important; 
 }
 
