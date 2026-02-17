@@ -4943,3 +4943,7 @@ product-recommendations:has([data-has-recommendations='false']) {
     translate: 0px var(--atc-destination, 0px);
   }
 }
+
+div#cart-drawer__header {
+  padding-bottom: 10px !important; 
+}
