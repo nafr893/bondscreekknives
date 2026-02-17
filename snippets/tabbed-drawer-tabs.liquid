@@ -14,18 +14,28 @@
 
 <div class="tabbed-drawer__tabs" role="tablist">
  {% for tab in tabs %}
-   <button
-     role="tab"
-     type="button"
-     class="tabbed-drawer__tab{% if tab == active_tab %} tabbed-drawer__tab--active{% endif %}"
-     data-tab="{{ tab }}"
-     aria-selected="{% if tab == active_tab %}true{% else %}false{% endif %}"
-     aria-controls="panel-{{ tab }}"
-     on:click="tabbed-header-drawer/switchTab?tabId={{ tab }}"
-     ref="tabButtons[]"
-   >
-     {{ tab | upcase }}
-   </button>
+   {% if tab == 'new' %}
+     <a
+       class="tabbed-drawer__tab"
+       href="{{ block_settings.tabbed_new_tab_url | default: '/collections/new' }}"
+       data-tab="{{ tab }}"
+     >
+       {{ tab | upcase }}
+     </a>
+   {% else %}
+     <button
+       role="tab"
+       type="button"
+       class="tabbed-drawer__tab{% if tab == active_tab %} tabbed-drawer__tab--active{% endif %}"
+       data-tab="{{ tab }}"
+       aria-selected="{% if tab == active_tab %}true{% else %}false{% endif %}"
+       aria-controls="panel-{{ tab }}"
+       on:click="tabbed-header-drawer/switchTab?tabId={{ tab }}"
+       ref="tabButtons[]"
+     >
+       {{ tab | upcase }}
+     </button>
+   {% endif %}
  {% endfor %}
 
 
