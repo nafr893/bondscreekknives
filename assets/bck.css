@@ -22,3 +22,7 @@ section#shopify-section-template--19665974722630__hero_jVaWmY {
 
 
  }
+
+ accordion-custom.menu.menu--accordion.menu--plus.menu--dividers  {
+    border-top: var(--divider-border-thickness) solid var(--color-border)
+ }
