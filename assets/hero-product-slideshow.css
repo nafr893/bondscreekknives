@@ -38,8 +38,9 @@
 
 /* MEDIA */
 .hps__media {
- border-radius: var(--hps-radius);
+ border-radius: 0;
  overflow: hidden;
+ aspect-ratio: 1 / 1;
 }
 
 
