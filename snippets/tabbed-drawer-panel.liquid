@@ -28,74 +28,50 @@
    {% when 'shop' %}
      {%- comment -%} SHOP Tab Content {%- endcomment -%}
      <div class="tabbed-drawer__content tabbed-drawer__content--shop">
-       <div class="tabbed-drawer__section">
-         <a href="{{ block_settings.tabbed_shop_heading_1_url | default: '#' }}" class="tabbed-drawer__heading-link">
-           <h3 class="tabbed-drawer__heading">{{ block_settings.tabbed_shop_heading_1 | default: 'BEST SELLERS' }}</h3>
-         </a>
+       {%- comment -%} Section Label {%- endcomment -%}
+       <div class="tabbed-drawer__section-label">
+         {{ block_settings.tabbed_shop_section_label | default: 'SHOP KNIVES' }}
        </div>
 
-
-       <div class="tabbed-drawer__section">
-         <a href="{{ block_settings.tabbed_shop_heading_2_url | default: '#' }}" class="tabbed-drawer__heading-link">
-           <h3 class="tabbed-drawer__heading">{{ block_settings.tabbed_shop_heading_2 | default: '' }}</h3>
-         </a>
+       {%- comment -%} Large Heading Links {%- endcomment -%}
+       <div class="tabbed-drawer__hero-links">
+         {% if block_settings.tabbed_shop_heading_1 != blank %}
+           <a href="{{ block_settings.tabbed_shop_heading_1_url | default: '#' }}" class="tabbed-drawer__hero-link">
+             {{ block_settings.tabbed_shop_heading_1 }}
+           </a>
+         {% endif %}
+         {% if block_settings.tabbed_shop_heading_2 != blank %}
+           <a href="{{ block_settings.tabbed_shop_heading_2_url | default: '#' }}" class="tabbed-drawer__hero-link">
+             {{ block_settings.tabbed_shop_heading_2 }}
+           </a>
+         {% endif %}
+         {% if block_settings.tabbed_shop_heading_3 != blank %}
+           <a href="{{ block_settings.tabbed_shop_heading_3_url | default: '#' }}" class="tabbed-drawer__hero-link">
+             {{ block_settings.tabbed_shop_heading_3 }}
+           </a>
+         {% endif %}
        </div>
 
+       {%- comment -%} Divider {%- endcomment -%}
+       <hr class="tabbed-drawer__divider">
 
-       {% if block_settings.tabbed_shop_accordion_1_menu != blank %}
-         <div class="tabbed-drawer__section">
-           <details class="tabbed-drawer__accordion"{% if block_settings.tabbed_shop_accordion_1_open %} open{% endif %}>
-             <summary class="tabbed-drawer__accordion-trigger">
-               <span>{{ block_settings.tabbed_shop_accordion_1 | default: 'SHOP BY CATEGORY' }}</span>
-               <span class="svg-wrapper icon-caret">
-                 {{ 'icon-caret.svg' | inline_asset_content }}
-               </span>
-             </summary>
-             <div class="tabbed-drawer__accordion-content">
-               <ul class="menu-drawer__menu" role="list">
-                 {% for link in linklists[block_settings.tabbed_shop_accordion_1_menu].links %}
-                   <li><a href="{{ link.url }}" class="tabbed-drawer__accordion-link">{{ link.title }}</a></li>
-                 {% endfor %}
-               </ul>
-             </div>
-           </details>
-         </div>
-       {% endif %}
-
-
-       {% if block_settings.tabbed_shop_accordion_2_menu != blank %}
-         <div class="tabbed-drawer__section">
-           <details class="tabbed-drawer__accordion"{% if block_settings.tabbed_shop_accordion_2_open %} open{% endif %}>
-             <summary class="tabbed-drawer__accordion-trigger">
-               <span>{{ block_settings.tabbed_shop_accordion_2 | default: 'SHOP BY PURPOSE' }}</span>
-               <span class="svg-wrapper icon-caret">
-                 {{ 'icon-caret.svg' | inline_asset_content }}
-               </span>
-             </summary>
-             <div class="tabbed-drawer__accordion-content">
-               <ul class="menu-drawer__menu" role="list">
-                 {% for link in linklists[block_settings.tabbed_shop_accordion_2_menu].links %}
-                   <li><a href="{{ link.url }}" class="tabbed-drawer__accordion-link">{{ link.title }}</a></li>
-                 {% endfor %}
-               </ul>
-             </div>
-           </details>
-         </div>
-       {% endif %}
-
-
-       <div class="tabbed-drawer__section">
-         <a href="{{ block_settings.tabbed_shop_link_url | default: '/collections/all' }}" class="tabbed-drawer__link-item">
-           {{ block_settings.tabbed_shop_link_text | default: 'SHOP ALL' }}
-         </a>
-       </div>
-
-
-       <div class="tabbed-drawer__promo">
-         <h4 class="tabbed-drawer__promo-title">{{ block_settings.tabbed_shop_promo_title | default: 'Planning a Hunt?' }}</h4>
-         <a href="{{ block_settings.tabbed_shop_promo_url | default: '/pages/system-builder' }}" class="button button--secondary tabbed-drawer__promo-cta">
-           {{ block_settings.tabbed_shop_promo_cta | default: 'BUILD YOUR SYSTEM' }}
-         </a>
+       {%- comment -%} Secondary Links {%- endcomment -%}
+       <div class="tabbed-drawer__secondary-links">
+         {% if block_settings.tabbed_shop_link_1_text != blank %}
+           <a href="{{ block_settings.tabbed_shop_link_1_url | default: '#' }}" class="tabbed-drawer__secondary-link">
+             {{ block_settings.tabbed_shop_link_1_text }}
+           </a>
+         {% endif %}
+         {% if block_settings.tabbed_shop_link_2_text != blank %}
+           <a href="{{ block_settings.tabbed_shop_link_2_url | default: '#' }}" class="tabbed-drawer__secondary-link">
+             {{ block_settings.tabbed_shop_link_2_text }}
+           </a>
+         {% endif %}
+         {% if block_settings.tabbed_shop_link_3_text != blank %}
+           <a href="{{ block_settings.tabbed_shop_link_3_url | default: '#' }}" class="tabbed-drawer__secondary-link">
+             {{ block_settings.tabbed_shop_link_3_text }}
+           </a>
+         {% endif %}
        </div>
      </div>
 
@@ -208,6 +184,3 @@
      </div>
  {% endcase %}
 </div>
-
-
-

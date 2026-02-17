@@ -328,16 +328,6 @@
  }
 
 
- .tabbed-drawer__heading {
-   font-family: var(--font-heading-family);
-   font-size: 1rem;
-   font-weight: 700;
-   letter-spacing: 0.05em;
-   margin: 0 0 0.5rem 0;
-   text-transform: uppercase;
- }
-
-
  .tabbed-drawer__section-title {
    font-family: var(--font-heading-family);
    font-size: 1.25rem;
@@ -348,79 +338,66 @@
  }
 
 
- /* Accordion Styles */
- .tabbed-drawer__accordion {
-   border: none;
- }
-
-
- .tabbed-drawer__accordion-trigger {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 0.75rem 0;
-   font-family: var(--font-h5--family);
+ /* Section Label (e.g. "SHOP KNIVES") */
+ .tabbed-drawer__section-label {
+   font-family: var(--font-heading-family);
    font-size: 0.875rem;
    font-weight: 600;
-   letter-spacing: 0.05em;
-   cursor: pointer;
-   list-style: none;
+   letter-spacing: 0.08em;
    text-transform: uppercase;
-  
+   color: var(--color-foreground);
+   margin-bottom: 0.25rem;
  }
 
 
- .tabbed-drawer__accordion-trigger::-webkit-details-marker {
-   display: none;
+ /* Large Hero Heading Links (e.g. BADGER, PREDATOR, SCAVENGER) */
+ .tabbed-drawer__hero-links {
+   display: flex;
+   flex-direction: column;
+   gap: 0;
  }
 
 
- .tabbed-drawer__accordion-trigger .icon-caret {
-   width: 1rem;
-   height: 1rem;
-   transition: transform 0.2s ease;
+ .tabbed-drawer__hero-link {
+   font-family: var(--font-heading-family);
+   font-size: 2.25rem;
+   font-weight: 900;
+   line-height: 1.15;
+   letter-spacing: 0.02em;
+   text-transform: uppercase;
+   color: var(--color-foreground);
+   text-decoration: none;
+   transition: opacity 0.2s ease;
+   padding: 0.1rem 0;
  }
 
 
- .tabbed-drawer__accordion[open] .icon-caret {
-   transform: rotate(180deg);
+ .tabbed-drawer__hero-link:hover {
+   opacity: 0.7;
  }
 
 
- .tabbed-drawer__accordion-content {
-  
-  }
-
-
- .tabbed-drawer__accordion-content ul {
-   list-style: none;
-   padding: 0;
-   margin: 0;
+ /* Divider */
+ .tabbed-drawer__divider {
+   border: none;
+   border-top: 1px solid var(--color-border);
+   margin: 0.75rem 0;
  }
 
 
- .tabbed-drawer__accordion-link {
+ /* Secondary Links (e.g. ACCESSORIES, BRANDED GEAR, SHOP ALL) */
+ .tabbed-drawer__secondary-links {
+   display: flex;
+   flex-direction: column;
+   gap: 0;
+ }
+
+
+ .tabbed-drawer__secondary-link {
    display: block;
    padding: 0.5rem 0;
-   font-family: var(--font-body-family);
-   font-size: 0.875rem;
-   color: var(--color-foreground);
-   text-decoration: none;
-   transition: opacity 0.2s ease;
- }
-
-
- .tabbed-drawer__accordion-link:hover {
-   opacity: 0.7;
- }
-
-
- /* Link Item */
- .tabbed-drawer__link-item {
-   display: block;
-   padding-bottom:1.25rem;
    font-family: var(--font-heading-family);
-   font-size: 0.875rem;
+   font-size: 0.9375rem;
    font-weight: 600;
    letter-spacing: 0.05em;
    color: var(--color-foreground);
@@ -430,34 +407,8 @@
  }
 
 
- .tabbed-drawer__link-item:hover {
+ .tabbed-drawer__secondary-link:hover {
    opacity: 0.7;
- }
-
-
- /* Promo Section */
- .tabbed-drawer__promo {
-   background: #ffffff;
-   padding: 0rem;
-   text-align: left;
-   border-radius: 4px;
- }
-
-
- .tabbed-drawer__promo-title {
-   font-family: var(--font-heading-family);
-   font-size: 20px;
-   font-weight: 700;
-   margin: 0 0 1rem 0;
-  
- }
-
-
- .tabbed-drawer__promo-cta {
-   width: fit-content;
-   background: #f3f3f3;
-   padding:  14px 20px;
-   border: 1px solid #d1d1d1;
  }
 
 
