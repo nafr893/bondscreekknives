@@ -568,7 +568,7 @@
         "text_fG9DqK": {
           "type": "text",
           "settings": {
-            "text": "<h2>LIFETIME WARRANTY</h2>",
+            "text": "<h1>LIFETIME WARRANTY</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
