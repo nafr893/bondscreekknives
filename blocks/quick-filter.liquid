@@ -96,7 +96,7 @@ width: 100%;
     flex-wrap: nowrap;
     z-index: 99;
     width: 100vw;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     font-size: 13px;
     gap: 10px;
@@ -112,7 +112,7 @@ width: 100%;
 
   .quick-filter__button {
     appearance: none;
-    background: rgba(187,187,187,0.25);
+    background: rgba(187, 187, 187, 0.25);
     border: 1px solid #f9f9f9;
     padding: var(--padding-sm) var(--padding-md);
     font-family: inherit;
@@ -121,8 +121,8 @@ width: 100%;
     letter-spacing: 0.05em;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
-color: #ffffff;
-    flex: 0 0 auto; /* prevents shrinking so scrolling actually happens */
+    color: #ffffff;
+    flex: 0 0 auto;
     white-space: nowrap;
   }
 
