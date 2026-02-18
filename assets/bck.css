@@ -28,5 +28,5 @@ summary.menu__heading.h4 {
 }
 
 main#MainContent.content-for-layout {
-    overflow-x: scroll; 
+    overflow-x: visible; 
 }
