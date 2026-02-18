@@ -26,3 +26,7 @@ section#shopify-section-template--19665974722630__hero_jVaWmY {
 summary.menu__heading.h4 {
     border-top: 1px solid  var(--color-border);
 }
+
+main#MainContent.content-for-layout {
+    overflow-x: hidden; 
+}
