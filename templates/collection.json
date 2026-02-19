@@ -95,7 +95,7 @@
         "color_scheme": "scheme-3",
         "background_media": "image",
         "video_position": "cover",
-        "background_image": "shopify://shop_images/Accessories_Collection_BCK.webp",
+        "background_image": "{{ collection.image }}",
         "background_image_position": "cover",
         "border": "none",
         "border_width": 1,
