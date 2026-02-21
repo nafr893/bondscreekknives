@@ -77,16 +77,15 @@
 .hpc__thumb {
   width: 96px;
   height: 96px;
-  display: grid;
-  place-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .hpc__thumb-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
-  margin: 10px;
 }
 
 .hpc__main {
@@ -134,49 +133,6 @@
   padding-top: 6px;
 }
 
-/* Labeled swatch items */
-.hpc__swatch-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-  cursor: pointer;
-}
-
-.hpc__swatch-item input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-}
-
-.hpc__swatch-dot {
-  width: 22px;
-  height: 22px;
-  border-radius: 3px;
-  border: 1.5px solid rgba(0,0,0,0.15);
-  background: #d9d9d9;
-  display: block;
-  transition: box-shadow 0.15s ease;
-}
-
-.hpc__swatch-item input:checked + .hpc__swatch-dot {
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px rgba(0,0,0,0.65);
-}
-
-.hpc__swatch-name {
-  font-size: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  text-align: center;
-  max-width: 30px;
-  line-height: 1.1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #666;
-}
 
 /* Price right */
 .hpc__price {
