@@ -90,6 +90,10 @@
       const imgEl = card.querySelector('.hpc__thumb-img');
       const swatches = Array.from(card.querySelectorAll('[data-hpc-swatch]'));
 
+      // Hero slide image — the large background image for this slide
+      const slide = card.closest('[data-hps-slide]');
+      const heroImg = slide ? slide.querySelector('.hps__image') : null;
+
       function setActiveSwatch(val) {
         swatches.forEach((b) => b.classList.toggle('is-active', b.dataset.swatchValue === val));
       }
@@ -117,17 +121,22 @@
           priceEl.innerHTML = html;
         }
 
-        // image (variant image support varies by theme json)
-        if (imgEl) {
-          const imgSrc =
-            (variant.featured_image && (variant.featured_image.src || variant.featured_image)) ||
-            (variant.image && (variant.image.src || variant.image)) ||
-            null;
+        // Resolve the variant image URL
+        const imgSrc =
+          (variant.featured_image && (variant.featured_image.src || variant.featured_image)) ||
+          (variant.image && (variant.image.src || variant.image)) ||
+          null;
 
-          if (imgSrc && typeof imgSrc === 'string') {
-            imgEl.setAttribute('src', imgSrc);
-            imgEl.setAttribute('srcset', '');
-          }
+        // Update thumbnail
+        if (imgEl && imgSrc && typeof imgSrc === 'string') {
+          imgEl.setAttribute('src', imgSrc);
+          imgEl.setAttribute('srcset', '');
+        }
+
+        // Update the large hero slide image
+        if (heroImg && imgSrc && typeof imgSrc === 'string') {
+          heroImg.setAttribute('src', imgSrc);
+          heroImg.setAttribute('srcset', '');
         }
       }
 
