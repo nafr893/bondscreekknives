@@ -71,15 +71,24 @@
     <div class="hpc__main">
       <p class="hpc__title">{{ product.title }}</p>
 
-      {% if current_color != blank %}
-    
-      {% else %}
-      
-      {% endif %}
-
       {% if color_values != nil and color_values.size > 0 %}
+        <p class="hpc__color-label">Color: <span data-hpc-color>{{ current_color }}</span></p>
         <div class="hpc__swatches" aria-label="Choose color">
-          {% render 'variant-swatches', product_resource: product %}
+          {% for color_value in color_values %}
+            <label class="hpc__swatch-item">
+              <input
+                type="radio"
+                name="hpc-color-{{ product.id }}"
+                value="{{ color_value.name | escape }}"
+                {% if color_value.name == current_color %}checked{% endif %}
+              >
+              <span
+                class="hpc__swatch-dot"
+                style="{% if color_value.swatch.color != blank %}background-color: {{ color_value.swatch.color }};{% elsif color_value.swatch.image != blank %}background-image: url('{{ color_value.swatch.image | image_url: width: 50 }}'); background-size: cover;{% endif %}"
+              ></span>
+              <span class="hpc__swatch-name">{{ color_value.name }}</span>
+            </label>
+          {% endfor %}
         </div>
       {% endif %}
     </div>
