@@ -90,11 +90,7 @@
       const imgEl = card.querySelector('.hpc__thumb-img');
       const swatches = Array.from(card.querySelectorAll('[data-hpc-swatch]'));
 
-      // Hero slide image — the large background image for this slide
-      const slide = card.closest('[data-hps-slide]');
-      const heroImg = slide ? slide.querySelector('.hps__image') : null;
-
-      function setActiveSwatch(val) {
+function setActiveSwatch(val) {
         swatches.forEach((b) => b.classList.toggle('is-active', b.dataset.swatchValue === val));
       }
 
@@ -133,11 +129,6 @@
           imgEl.setAttribute('srcset', '');
         }
 
-        // Update the large hero slide image
-        if (heroImg && imgSrc && typeof imgSrc === 'string') {
-          heroImg.setAttribute('src', imgSrc);
-          heroImg.setAttribute('srcset', '');
-        }
       }
 
       swatches.forEach((btn) => {
