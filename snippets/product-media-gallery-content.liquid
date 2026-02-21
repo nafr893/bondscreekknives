@@ -52,10 +52,14 @@
   assign render_mobile_slideshow_controls = false
 
   if block_settings.slideshow_controls_style != block_settings.slideshow_mobile_controls_style
-    assign slideshow_controls_class = 'mobile:hidden'
+    # When main style is thumbnails, keep them visible on mobile (below the image)
+    # rather than hiding them and showing a separate mobile control
+    if block_settings.slideshow_controls_style != 'thumbnails'
+      assign slideshow_controls_class = 'mobile:hidden'
 
-    if block_settings.slideshow_mobile_controls_style != 'hint'
-      assign render_mobile_slideshow_controls = true
+      if block_settings.slideshow_mobile_controls_style != 'hint'
+        assign render_mobile_slideshow_controls = true
+      endif
     endif
   endif
 
