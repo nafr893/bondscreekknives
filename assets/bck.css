@@ -29,3 +29,31 @@ summary.menu__heading.h4 {
 
 
 
+/* product page styles  breadcrumbs css */
+div.mobile-breadcrumbs-title.hidden--desktop {
+   padding-top: .5rem;
+   padding-bottom: .5rem;
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+
+nav.breadcrumbs li#breadcrumb-text, nav.breadcrumbs a#breadcrumb-text {
+   color: #656565 !important;
+   font-size: 11px !important;
+}
+
+div.product-information__grid.product-information--media-left.product-information__grid--half {
+h1 {
+   font-size: 24px !important;
+}
+product.price.text-block.text-left h5.spacing-style {
+   width: fit-content;
+}
+
+}
+
+rte-formatter.spacing-style.text-block.text-block--AOElEaEJXMjFuMUdlM__text_cwd6rg.rte.text-block--align-center.text-block--background.rte  {
+   p {
+       font-size: 12px;
+   }
+}
