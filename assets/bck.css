@@ -122,3 +122,9 @@ div.spacing-style.slide__content.background-transparent {
 main#MainContent.content-for-layout {
     overflow-x: hidden; 
 }
+ol#breadcrumbs__list.breadcrumbs__list {
+    display: flex; 
+    gap: 10px; 
+    padding-left: 0;
+    
+}
