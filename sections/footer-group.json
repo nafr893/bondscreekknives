@@ -295,8 +295,8 @@
                   "type": "menu",
                   "name": "t:names.menu",
                   "settings": {
-                    "menu": "support",
-                    "heading": "SUPPORT",
+                    "menu": "resources",
+                    "heading": "RESOURCES",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
                     "accordion_icon": "caret",
