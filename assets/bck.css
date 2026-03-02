@@ -98,9 +98,7 @@ li::marker {
  }
 }
 
-footer#shopify-section-sections--19665974329414__footer_wdA6jm.shopify-section.shopify-section-group-footer-group.section-wrapper {
-    display: none; 
-}
+
 
 
 
@@ -140,3 +138,10 @@ ol#breadcrumbs__list.breadcrumbs__list{
     padding-left: 0 !important;
 
 }
+
+ @media (max-width: 480px) {
+
+footer#shopify-section-sections--19665974329414__footer_wdA6jm.shopify-section.shopify-section-group-footer-group.section-wrapper {
+    display: none; 
+}
+ }
