@@ -605,9 +605,9 @@
       "settings": {
         "collection_list": [
           "knives",
-          "featured",
           "merch",
-          "daily-essentials"
+          "daily-essentials",
+          "all-products"
         ],
         "layout_type": "carousel",
         "carousel_on_mobile": false,
