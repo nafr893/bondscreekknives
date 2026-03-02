@@ -75,7 +75,106 @@
         "text_YLPk4p",
         "button_H9gpTf"
       ],
-      "name": "t:names.hero",
+      "name": "Hero Mobile",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/BCK-6801.webp",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "flex-end",
+        "align_baseline": true,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 24,
+        "section_width": "page-width",
+        "section_height": "custom",
+        "section_height_custom": 95,
+        "color_scheme": "scheme-3",
+        "toggle_overlay": false,
+        "overlay_color": "#12121266",
+        "overlay_style": "solid",
+        "gradient_direction": "to bottom",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 100,
+        "padding-block-end": 72
+      }
+    },
+    "hero_ccfRJE": {
+      "type": "hero",
+      "blocks": {
+        "custom_label_ptWKhk": {
+          "type": "custom-label",
+          "name": "Custom label",
+          "settings": {
+            "text": "BADGER™",
+            "link": "",
+            "text_color": "#ffffff",
+            "bg_color": "#ffffff",
+            "bg_opacity": 15,
+            "hover_bg_color": "#f2f2f2",
+            "hover_bg_opacity": 20,
+            "border_color": "#ffffff",
+            "border_opacity": 100
+          },
+          "blocks": {}
+        },
+        "text_CM4VMH": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h1>BEST EVERYDAY CARRY</h1>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground-heading)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_Uhregi": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "SHOP NOW",
+            "link": "shopify://products/badger-variants",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "custom_label_ptWKhk",
+        "text_CM4VMH",
+        "button_Uhregi"
+      ],
+      "name": "Hero Desktop",
       "settings": {
         "media_type_1": "image",
         "image_1": "shopify://shop_images/BCK-6801.webp",
@@ -704,6 +803,7 @@
   },
   "order": [
     "hero_jVaWmY",
+    "hero_ccfRJE",
     "product_list_fa6P9H",
     "collection_list_8GqKHQ",
     "slide_product_showcase_4c99wi",
