@@ -122,7 +122,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
+            "gap": 25,
             "width": "custom",
             "custom_width": 50,
             "width_mobile": "fill",
@@ -151,68 +151,158 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "custom_label_eBERWf": {
-              "type": "custom-label",
-              "name": "Custom label",
+            "group_4tJDka": {
+              "type": "group",
+              "name": "t:names.group",
               "settings": {
-                "text": "BADGER™",
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 15,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
                 "link": "",
-                "text_color": "#ffffff",
-                "bg_color": "#ffffff",
-                "bg_opacity": 15,
-                "hover_bg_color": "#f2f2f2",
-                "hover_bg_opacity": 20,
-                "border_color": "#ffffff",
-                "border_opacity": 100
-              },
-              "blocks": {}
-            },
-            "text_8kc8KC": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h1>BEST EVERYDAY CARRY KNIFE</h1>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h1",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground-heading)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {}
-            },
-            "button_gYj7BX": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "SHOP NOW",
-                "link": "shopify://products/badger-variants",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
+              "blocks": {
+                "custom_label_Ef8JxU": {
+                  "type": "custom-label",
+                  "name": "Custom label",
+                  "settings": {
+                    "text": "BADGER™",
+                    "link": "",
+                    "text_color": "#ffffff",
+                    "bg_color": "#ffffff",
+                    "bg_opacity": 15,
+                    "hover_bg_color": "#f2f2f2",
+                    "hover_bg_opacity": 20,
+                    "border_color": "#ffffff",
+                    "border_opacity": 100
+                  },
+                  "blocks": {}
+                },
+                "text_c8kWGP": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<h1>BEST EVERYDAY CARRY KNIFE</h1>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h1",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
               },
-              "blocks": {}
+              "block_order": [
+                "custom_label_Ef8JxU",
+                "text_c8kWGP"
+              ]
+            },
+            "group_QkfPh7": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "button_U7CtMr": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "SHOP NOW",
+                    "link": "shopify://products/badger-variants",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_U7CtMr"
+              ]
             }
           },
           "block_order": [
-            "custom_label_eBERWf",
-            "text_8kc8KC",
-            "button_gYj7BX"
+            "group_4tJDka",
+            "group_QkfPh7"
           ]
         }
       },
