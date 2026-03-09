@@ -779,7 +779,7 @@
                   "type": "_accordion-row",
                   "settings": {
                     "heading": "PRODUCT OVERVIEW",
-                    "open_by_default": true,
+                    "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
@@ -997,7 +997,7 @@
                   "type": "_accordion-row",
                   "settings": {
                     "heading": "MANUFACTURING",
-                    "open_by_default": true,
+                    "open_by_default": false,
                     "icon": "none",
                     "width": 20
                   },
@@ -1477,7 +1477,7 @@
                 "alt": "",
                 "custom_width": 100,
                 "custom_width_mobile": 100,
-                "aspect_ratio": "auto",
+                "aspect_ratio": "16/9",
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
