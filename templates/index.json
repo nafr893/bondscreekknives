@@ -742,7 +742,8 @@
           "knives",
           "merch",
           "daily-essentials",
-          "all-products"
+          "all-products",
+          "bonds-creek-knives-apparel-colors"
         ],
         "layout_type": "carousel",
         "carousel_on_mobile": false,
@@ -765,7 +766,7 @@
     "slide_product_showcase_4c99wi": {
       "type": "slide-product-showcase",
       "blocks": {
-        "slide_JJD8JK": {
+        "slide_nfYVNk": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/BCK-6813.webp",
@@ -783,7 +784,7 @@
         }
       },
       "block_order": [
-        "slide_JJD8JK",
+        "slide_nfYVNk",
         "slide_AzPYbK"
       ],
       "name": "Hero + Product Slideshow",
