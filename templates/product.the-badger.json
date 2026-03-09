@@ -1489,6 +1489,20 @@
         "padding-block-end": 0
       }
     },
+    "divider_7cd4XN": {
+      "type": "divider",
+      "name": "t:names.divider_section",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "full-width",
+        "thickness": 1,
+        "corner_radius": "square",
+        "width_percent": 100,
+        "alignment_horizontal": "center",
+        "padding-block-start": 16,
+        "padding-block-end": 16
+      }
+    },
     "section_FDHiTA": {
       "type": "section",
       "blocks": {
@@ -1588,7 +1602,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 24,
+        "padding-block-start": 48,
         "padding-block-end": 0
       }
     },
@@ -1737,6 +1751,7 @@
   "order": [
     "main",
     "section_FDHiTA",
+    "divider_7cd4XN",
     "1773085436c554fa66",
     "product_recommendations_qggXJq"
   ]
