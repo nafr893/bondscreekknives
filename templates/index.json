@@ -887,7 +887,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "LEARN MORe",
-            "link": "shopify://collections/all",
+            "link": "shopify://pages/returns-and-warranty",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
