@@ -20,9 +20,7 @@ section#shopify-section-template--19665974722630__hero_jVaWmY {
     display: none; 
 }
 
-section#shopify-section-template--19665974722630__hero_ccfRJE {
-    display: none; 
-}
+
 
 
 footer#shopify-section-sections--19665974329414__footer_m9NzUG.shopify-section.shopify-section-group-footer-group.section-wrapper {
@@ -146,6 +144,10 @@ ol#breadcrumbs__list.breadcrumbs__list{
 }
 
  @media (max-width: 480px) {
+
+section#shopify-section-template--19665974722630__hero_ccfRJE {
+    display: none; 
+}
 
 footer#shopify-section-sections--19665974329414__footer_wdA6jm.shopify-section.shopify-section-group-footer-group.section-wrapper {
     display: none; 
