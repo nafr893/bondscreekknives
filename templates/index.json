@@ -120,7 +120,7 @@
             "vertical_alignment": "center",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "space-between",
+            "vertical_alignment_flex_direction_column": "flex-end",
             "gap": 32,
             "width": "fill",
             "custom_width": 100,
@@ -132,6 +132,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
+            "background_image": "shopify://shop_images/Predator_V1.webp",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -163,10 +164,26 @@
               },
               "blocks": {}
             },
+            "custom_label_a3GPW3": {
+              "type": "custom-label",
+              "name": "Custom label",
+              "settings": {
+                "text": "PREDATOR™",
+                "link": "",
+                "text_color": "#ffffff",
+                "bg_color": "#ffffff",
+                "bg_opacity": 15,
+                "hover_bg_color": "#ffffff",
+                "hover_bg_opacity": 20,
+                "border_color": "#ffffff",
+                "border_opacity": 100
+              },
+              "blocks": {}
+            },
             "text_pfzc8j": {
               "type": "text",
               "settings": {
-                "text": "<h3>New arrivals</h3>",
+                "text": "<h3>FIELD DRESSING BLADE</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "center",
@@ -205,6 +222,7 @@
           },
           "block_order": [
             "spacer_NdGAtb",
+            "custom_label_a3GPW3",
             "text_pfzc8j",
             "button_kLHbnt"
           ]
@@ -218,7 +236,7 @@
             "vertical_alignment": "center",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "space-between",
+            "vertical_alignment_flex_direction_column": "flex-end",
             "gap": 32,
             "width": "fill",
             "custom_width": 100,
@@ -230,6 +248,7 @@
             "color_scheme": "scheme-5",
             "background_media": "image",
             "video_position": "cover",
+            "background_image": "shopify://shop_images/Badger_Picture.webp",
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
@@ -261,10 +280,26 @@
               },
               "blocks": {}
             },
+            "custom_label_4PB47P": {
+              "type": "custom-label",
+              "name": "Custom label",
+              "settings": {
+                "text": "BADGER™",
+                "link": "",
+                "text_color": "#ffffff",
+                "bg_color": "#ffffff",
+                "bg_opacity": 15,
+                "hover_bg_color": "#ffffff",
+                "hover_bg_opacity": 20,
+                "border_color": "#ffffff",
+                "border_opacity": 100
+              },
+              "blocks": {}
+            },
             "text_Rmahmk": {
               "type": "text",
               "settings": {
-                "text": "<h3>Bestsellers</h3>",
+                "text": "<h3>EVERYDAY CARRY</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "center",
@@ -303,6 +338,7 @@
           },
           "block_order": [
             "spacer_7EN3kM",
+            "custom_label_4PB47P",
             "text_Rmahmk",
             "button_bChjqV"
           ]
