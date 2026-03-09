@@ -213,7 +213,12 @@
                         "image_upload": "shopify://shop_images/AdobeStock_104221787.jpg",
                         "width": 24,
                         "link": "",
-                        "open_in_new_tab": false
+                        "open_in_new_tab": false,
+                        "background_color": "rgba(0,0,0,0)",
+                        "border_color": "#000000",
+                        "border_weight": 0,
+                        "container_width": 48,
+                        "container_height": 48
                       },
                       "blocks": {}
                     },
@@ -524,7 +529,12 @@
                         "image_upload": "shopify://shop_images/American_Flag_Icon_ca1fdb6e-e68a-40aa-9532-e88e1cfe0808.png",
                         "width": 24,
                         "link": "",
-                        "open_in_new_tab": false
+                        "open_in_new_tab": false,
+                        "background_color": "rgba(0,0,0,0)",
+                        "border_color": "#000000",
+                        "border_weight": 0,
+                        "container_width": 48,
+                        "container_height": 48
                       },
                       "blocks": {}
                     },
@@ -608,7 +618,12 @@
                         "image_upload": "shopify://shop_images/Bonds_Creek_Black_Logo_v23_a3d53fe3-2220-4ee3-994f-fec309925dd4.png",
                         "width": 24,
                         "link": "",
-                        "open_in_new_tab": false
+                        "open_in_new_tab": false,
+                        "background_color": "rgba(0,0,0,0)",
+                        "border_color": "#000000",
+                        "border_weight": 0,
+                        "container_width": 48,
+                        "container_height": 48
                       },
                       "blocks": {}
                     },
@@ -692,7 +707,12 @@
                         "image_upload": "shopify://shop_images/Army_Star_Icon_4d8f7e47-5407-47b5-a264-337090baa4b0.png",
                         "width": 24,
                         "link": "",
-                        "open_in_new_tab": false
+                        "open_in_new_tab": false,
+                        "background_color": "rgba(0,0,0,0)",
+                        "border_color": "#000000",
+                        "border_weight": 0,
+                        "container_width": 48,
+                        "container_height": 48
                       },
                       "blocks": {}
                     },
@@ -983,10 +1003,10 @@
                   "blocks": {
                     "group_mPtYtn": {
                       "type": "group",
-                      "name": "t:names.group",
+                      "name": "Feature",
                       "settings": {
-                        "content_direction": "column",
-                        "vertical_on_mobile": true,
+                        "content_direction": "row",
+                        "vertical_on_mobile": false,
                         "horizontal_alignment": "flex-start",
                         "vertical_alignment": "center",
                         "align_baseline": false,
@@ -1069,7 +1089,12 @@
                                 "image_upload": "shopify://shop_images/Sheath_Icon_cceef828-260b-44e3-a4ce-c3006414f91e.png",
                                 "width": 12,
                                 "link": "",
-                                "open_in_new_tab": false
+                                "open_in_new_tab": false,
+                                "background_color": "#f5f5f5",
+                                "border_color": "#767676",
+                                "border_weight": 1,
+                                "container_width": 48,
+                                "container_height": 48
                               },
                               "blocks": {}
                             }
@@ -1089,7 +1114,7 @@
                             "align_baseline": false,
                             "horizontal_alignment_flex_direction_column": "flex-start",
                             "vertical_alignment_flex_direction_column": "center",
-                            "gap": 12,
+                            "gap": 2,
                             "width": "fill",
                             "custom_width": 100,
                             "width_mobile": "fill",
@@ -1117,43 +1142,74 @@
                             "padding-inline-start": 0,
                             "padding-inline-end": 0
                           },
-                          "blocks": {}
+                          "blocks": {
+                            "text_k7KDXh": {
+                              "type": "text",
+                              "name": "t:names.text",
+                              "settings": {
+                                "text": "<p><strong>KYDEX SHEATH</strong></p>",
+                                "width": "fit-content",
+                                "max_width": "normal",
+                                "alignment": "left",
+                                "type_preset": "rte",
+                                "font": "var(--font-body--family)",
+                                "font_size": "1rem",
+                                "line_height": "normal",
+                                "letter_spacing": "normal",
+                                "case": "none",
+                                "wrap": "pretty",
+                                "color": "var(--color-foreground)",
+                                "background": false,
+                                "background_color": "#00000026",
+                                "corner_radius": 0,
+                                "padding-block-start": 0,
+                                "padding-block-end": 0,
+                                "padding-inline-start": 0,
+                                "padding-inline-end": 0
+                              },
+                              "blocks": {}
+                            },
+                            "text_9irHjx": {
+                              "type": "text",
+                              "name": "t:names.text",
+                              "settings": {
+                                "text": "<p>Kydex is a tough, lightweight thermoplastic built for impact resistance and durability.</p>",
+                                "width": "fit-content",
+                                "max_width": "normal",
+                                "alignment": "left",
+                                "type_preset": "rte",
+                                "font": "var(--font-body--family)",
+                                "font_size": "1rem",
+                                "line_height": "normal",
+                                "letter_spacing": "normal",
+                                "case": "none",
+                                "wrap": "pretty",
+                                "color": "var(--color-foreground)",
+                                "background": false,
+                                "background_color": "#00000026",
+                                "corner_radius": 0,
+                                "padding-block-start": 0,
+                                "padding-block-end": 0,
+                                "padding-inline-start": 0,
+                                "padding-inline-end": 0
+                              },
+                              "blocks": {}
+                            }
+                          },
+                          "block_order": [
+                            "text_k7KDXh",
+                            "text_9irHjx"
+                          ]
                         }
                       },
                       "block_order": [
                         "group_MecgCV",
                         "group_Aw6Y3T"
                       ]
-                    },
-                    "text_MnMM9V": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
                     }
                   },
                   "block_order": [
-                    "group_mPtYtn",
-                    "text_MnMM9V"
+                    "group_mPtYtn"
                   ]
                 },
                 "accordion_row_BnPFNL": {
