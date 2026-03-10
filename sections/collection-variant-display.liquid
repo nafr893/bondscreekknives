@@ -1,106 +1,143 @@
+<script
+  src="{{ 'results-list.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{% javascript %}
+  const url = new URL(window.location.href);
+  if (url.hash) {
+    document.addEventListener(
+      'DOMContentLoaded',
+      () => {
+        const card = document.getElementById(url.hash.slice(1));
+        if (card) {
+          card.scrollIntoView({ behavior: 'instant' });
+        }
+      },
+      { once: true }
+    );
+  }
+{% endjavascript %}
+
 {%- liquid
   assign color_option_name = section.settings.color_option_name | default: 'Color'
-  assign cols_desktop = section.settings.columns_desktop | default: 4
-  assign cols_mobile  = section.settings.columns_mobile  | default: 2
-  assign gap          = section.settings.gap | default: 16
-  assign image_ratio  = section.settings.image_ratio | default: '1/1'
+  assign image_ratio = section.settings.image_ratio | default: '1/1'
 -%}
 
-<div
-  class="section-background color-{{ section.settings.color_scheme }}"
-></div>
-
-<div
-  class="variant-display-section color-{{ section.settings.color_scheme }}"
-  style="
-    --vd-cols-desktop: {{ cols_desktop }};
-    --vd-cols-mobile: {{ cols_mobile }};
-    --vd-gap: {{ gap }}px;
-    padding-block-start: {{ section.settings.padding-block-start }}px;
-    padding-block-end: {{ section.settings.padding-block-end }}px;
-  "
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<results-list
+  class="section product-grid-container color-{{ section.settings.color_scheme }}"
+  style="--padding-block-start: {{ section.settings.padding-block-start }}px; --padding-block-end: {{ section.settings.padding-block-end }}px;"
+  section-id="{{ section.id }}"
+  infinite-scroll="{{ section.settings.enable_infinite_scroll }}"
 >
-  <ul class="variant-display-grid list-unstyled">
-    {%- for product in collection.products -%}
-      {%- liquid
-        # Find the index of the color option for this product
-        assign color_index = nil
-        for option in product.options
-          assign option_lower = option | downcase
-          assign target_lower = color_option_name | downcase
-          if option_lower == target_lower
-            unless color_index
-              assign color_index = forloop.index0
-            endunless
-          endif
-        endfor
+  {% render 'skip-to-content-link', href: '#ResultsList', text: 'accessibility.skip_to_results_list' %}
 
-        # Track which color values have already been rendered
-        assign seen_colors = ','
-      -%}
+  <div
+    class="collection-wrapper grid gap-style{% if section.settings.product_grid_width == 'full-width' %} collection-wrapper--grid-full-width{% endif %}"
+  >
+    {% content_for 'block',
+      type: 'filters',
+      id: 'filters',
+      results: collection,
+      results_size: collection.products_count
+    %}
 
-      {%- if color_index != nil -%}
-        {%- comment -%} One card per unique color value {%- endcomment -%}
-        {%- for variant in product.variants -%}
+    {% assign products_per_page = 24 %}
+    {% if section.settings.enable_infinite_scroll == false %}
+      {% assign products_per_page = section.settings.products_per_page %}
+    {% endif %}
+
+    {% paginate collection.products by products_per_page %}
+      {% capture children %}
+        {% for product in collection.products %}
           {%- liquid
-            assign color_value = variant.options[color_index]
-            assign color_slug  = color_value | handleize
-            assign color_marker = ',' | append: color_slug | append: ','
+            # Find the color option index for this product
+            assign color_index = nil
+            for option in product.options
+              assign option_lower = option | downcase
+              assign target_lower = color_option_name | downcase
+              if option_lower == target_lower
+                unless color_index
+                  assign color_index = forloop.index0
+                endunless
+              endif
+            endfor
+            assign seen_colors = ','
           -%}
-          {%- unless seen_colors contains color_marker -%}
-            {%- assign seen_colors = seen_colors | append: color_slug | append: ',' -%}
-            <li class="variant-display-grid__item">
-              {%- render 'variant-card',
-                variant: variant,
-                product: product,
-                color_label: color_value,
-                image_ratio: image_ratio
+
+          {%- if color_index != nil -%}
+            {%- for variant in product.variants -%}
+              {%- liquid
+                assign color_value  = variant.options[color_index]
+                assign color_slug   = color_value | handleize
+                assign color_marker = ',' | append: color_slug | append: ','
               -%}
-            </li>
-          {%- endunless -%}
-        {%- endfor -%}
-      {%- else -%}
-        {%- comment -%} No color option found — one card per variant {%- endcomment -%}
-        {%- for variant in product.variants -%}
-          <li class="variant-display-grid__item">
-            {%- render 'variant-card',
-              variant: variant,
-              product: product,
-              color_label: variant.title,
-              image_ratio: image_ratio
-            -%}
-          </li>
-        {%- endfor -%}
-      {%- endif -%}
-    {%- endfor -%}
-  </ul>
-</div>
+              {%- unless seen_colors contains color_marker -%}
+                {%- assign seen_colors = seen_colors | append: color_slug | append: ',' -%}
+                <li
+                  id="{{ section.id }}-{{ product.id }}-{{ variant.id }}"
+                  class="product-grid__item product-grid__item--{{ forloop.index0 }}"
+                  data-page="{{ paginate.current_page }}"
+                  data-product-id="{{ product.id }}"
+                  ref="cards[]"
+                >
+                  {%- render 'variant-card',
+                    variant: variant,
+                    product: product,
+                    color_label: color_value,
+                    image_ratio: image_ratio
+                  -%}
+                </li>
+              {%- endunless -%}
+            {%- endfor -%}
+          {%- else -%}
+            {%- comment -%} No matching color option — one card per variant {%- endcomment -%}
+            {%- for variant in product.variants -%}
+              <li
+                id="{{ section.id }}-{{ product.id }}-{{ variant.id }}"
+                class="product-grid__item product-grid__item--{{ forloop.index0 }}"
+                data-page="{{ paginate.current_page }}"
+                data-product-id="{{ product.id }}"
+                ref="cards[]"
+              >
+                {%- render 'variant-card',
+                  variant: variant,
+                  product: product,
+                  color_label: variant.title,
+                  image_ratio: image_ratio
+                -%}
+              </li>
+            {%- endfor -%}
+          {%- endif -%}
+        {% endfor %}
+      {% endcapture %}
+
+      {% render 'product-grid',
+        section: section,
+        children: children,
+        products: collection.products,
+        paginate: paginate,
+        enable_infinite_scroll: section.settings.enable_infinite_scroll
+      %}
+    {% endpaginate %}
+  </div>
+</results-list>
 
 {% stylesheet %}
-  .variant-display-section {
-    width: 100%;
-    max-width: var(--page-width, 1200px);
-    margin-inline: auto;
-    padding-inline: var(--padding-md, 16px);
-    box-sizing: border-box;
-  }
+  .main-collection-grid {
+    grid-column: var(--grid-column--mobile);
 
-  .variant-display-grid {
-    display: grid;
-    grid-template-columns: repeat(var(--vd-cols-mobile, 2), 1fr);
-    gap: var(--vd-gap, 16px);
-  }
-
-  @media screen and (min-width: 750px) {
-    .variant-display-grid {
-      grid-template-columns: repeat(var(--vd-cols-desktop, 4), 1fr);
+    @media screen and (min-width: 750px) {
+      grid-column: var(--grid-column--desktop);
     }
   }
 {% endstylesheet %}
 
 {% schema %}
 {
-  "name": "Variant Display Grid",
+  "name": "Variant Display Collection",
   "enabled_on": {
     "templates": ["collection"]
   },
@@ -132,51 +169,106 @@
       "content": "Grid Layout"
     },
     {
-      "type": "range",
-      "id": "columns_desktop",
-      "label": "Columns (desktop)",
-      "min": 2,
-      "max": 6,
-      "step": 1,
-      "default": 4
+      "type": "select",
+      "id": "layout_type",
+      "label": "t:settings.type",
+      "options": [
+        { "value": "grid",    "label": "t:options.grid" },
+        { "value": "organic", "label": "t:options.editorial" }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "select",
+      "id": "product_card_size",
+      "label": "t:settings.card_size",
+      "options": [
+        { "value": "small",       "label": "t:options.small" },
+        { "value": "medium",      "label": "t:options.medium" },
+        { "value": "large",       "label": "t:options.large" },
+        { "value": "extra-large", "label": "t:options.extra_large" }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "select",
+      "id": "mobile_product_card_size",
+      "label": "t:settings.mobile_card_size",
+      "options": [
+        { "value": "small", "label": "t:options.small" },
+        { "value": "large", "label": "t:options.large" }
+      ],
+      "default": "small"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_infinite_scroll",
+      "label": "t:settings.enable_infinite_scroll",
+      "default": true
     },
     {
       "type": "range",
-      "id": "columns_mobile",
-      "label": "Columns (mobile)",
-      "min": 1,
-      "max": 3,
-      "step": 1,
-      "default": 2
+      "id": "products_per_page",
+      "label": "t:settings.products_per_page",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "product_grid_width",
+      "label": "t:settings.width",
+      "options": [
+        { "value": "centered",   "label": "t:options.page_width" },
+        { "value": "full-width", "label": "t:options.full_width" }
+      ],
+      "default": "centered"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width_on_mobile",
+      "label": "t:settings.full_width_on_mobile",
+      "default": true
     },
     {
       "type": "range",
-      "id": "gap",
-      "label": "Gap between cards",
+      "id": "columns_gap_horizontal",
+      "label": "t:settings.horizontal_gap",
       "min": 0,
-      "max": 64,
+      "max": 40,
       "step": 4,
       "unit": "px",
       "default": 16
     },
     {
+      "type": "range",
+      "id": "columns_gap_vertical",
+      "label": "t:settings.vertical_gap",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
       "type": "header",
-      "content": "Style"
+      "content": "t:content.style"
     },
     {
       "type": "color_scheme",
       "id": "color_scheme",
-      "label": "Color scheme",
+      "label": "t:settings.color_scheme",
       "default": "scheme-1"
     },
     {
       "type": "header",
-      "content": "Padding"
+      "content": "t:content.padding"
     },
     {
       "type": "range",
       "id": "padding-block-start",
-      "label": "Top padding",
+      "label": "t:settings.top",
       "min": 0,
       "max": 100,
       "step": 4,
@@ -186,12 +278,32 @@
     {
       "type": "range",
       "id": "padding-block-end",
-      "label": "Bottom padding",
+      "label": "t:settings.bottom",
       "min": 0,
       "max": 100,
       "step": 4,
       "unit": "px",
       "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
     }
   ]
 }

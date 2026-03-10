@@ -1,9 +1,9 @@
 {
   "sections": {
-    "heading": {
+    "section": {
       "type": "section",
       "blocks": {
-        "title": {
+        "text_tqQTNE": {
           "type": "text",
           "name": "Title",
           "settings": {
@@ -29,7 +29,7 @@
           },
           "blocks": {}
         },
-        "description": {
+        "text_twGGkJ": {
           "type": "text",
           "name": "Description",
           "settings": {
@@ -54,9 +54,22 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "quick_filter_WFxjxc": {
+          "type": "quick-filter",
+          "name": "Quick Filter",
+          "settings": {
+            "all_button_label": "All",
+            "button_gap": 8
+          },
+          "blocks": {}
         }
       },
-      "block_order": ["title", "description"],
+      "block_order": [
+        "text_tqQTNE",
+        "text_twGGkJ",
+        "quick_filter_WFxjxc"
+      ],
       "name": "Collection heading",
       "settings": {
         "content_direction": "column",
@@ -89,17 +102,50 @@
     },
     "main": {
       "type": "collection-variant-display",
+      "blocks": {
+        "filters": {
+          "type": "filters",
+          "static": true,
+          "settings": {
+            "enable_filtering": true,
+            "filter_style": "horizontal",
+            "filter_width": "centered",
+            "text_label_case": "default",
+            "show_swatch_label": false,
+            "show_filter_label": false,
+            "enable_sorting": true,
+            "enable_grid_density": true,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "padding-block-start": 8,
+            "padding-block-end": 8,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "facets_margin_bottom": 8,
+            "facets_margin_right": 20
+          },
+          "blocks": {}
+        }
+      },
       "settings": {
         "color_option_name": "Color",
         "image_ratio": "1/1",
-        "columns_desktop": 4,
-        "columns_mobile": 2,
-        "gap": 16,
+        "layout_type": "grid",
+        "product_card_size": "medium",
+        "mobile_product_card_size": "small",
+        "enable_infinite_scroll": true,
+        "products_per_page": 24,
+        "product_grid_width": "centered",
+        "full_width_on_mobile": true,
+        "columns_gap_horizontal": 16,
+        "columns_gap_vertical": 24,
         "color_scheme": "scheme-1",
         "padding-block-start": 0,
-        "padding-block-end": 32
+        "padding-block-end": 32,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
       }
     }
   },
-  "order": ["heading", "main"]
+  "order": ["section", "main"]
 }
