@@ -1,0 +1,198 @@
+{%- liquid
+  assign color_option_name = section.settings.color_option_name | default: 'Color'
+  assign cols_desktop = section.settings.columns_desktop | default: 4
+  assign cols_mobile  = section.settings.columns_mobile  | default: 2
+  assign gap          = section.settings.gap | default: 16
+  assign image_ratio  = section.settings.image_ratio | default: '1/1'
+-%}
+
+<div
+  class="section-background color-{{ section.settings.color_scheme }}"
+></div>
+
+<div
+  class="variant-display-section color-{{ section.settings.color_scheme }}"
+  style="
+    --vd-cols-desktop: {{ cols_desktop }};
+    --vd-cols-mobile: {{ cols_mobile }};
+    --vd-gap: {{ gap }}px;
+    padding-block-start: {{ section.settings.padding-block-start }}px;
+    padding-block-end: {{ section.settings.padding-block-end }}px;
+  "
+>
+  <ul class="variant-display-grid list-unstyled">
+    {%- for product in collection.products -%}
+      {%- liquid
+        # Find the index of the color option for this product
+        assign color_index = nil
+        for option in product.options
+          assign option_lower = option | downcase
+          assign target_lower = color_option_name | downcase
+          if option_lower == target_lower
+            unless color_index
+              assign color_index = forloop.index0
+            endunless
+          endif
+        endfor
+
+        # Track which color values have already been rendered
+        assign seen_colors = ','
+      -%}
+
+      {%- if color_index != nil -%}
+        {%- comment -%} One card per unique color value {%- endcomment -%}
+        {%- for variant in product.variants -%}
+          {%- liquid
+            assign color_value = variant.options[color_index]
+            assign color_slug  = color_value | handleize
+            assign color_marker = ',' | append: color_slug | append: ','
+          -%}
+          {%- unless seen_colors contains color_marker -%}
+            {%- assign seen_colors = seen_colors | append: color_slug | append: ',' -%}
+            <li class="variant-display-grid__item">
+              {%- render 'variant-card',
+                variant: variant,
+                product: product,
+                color_label: color_value,
+                image_ratio: image_ratio
+              -%}
+            </li>
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- else -%}
+        {%- comment -%} No color option found — one card per variant {%- endcomment -%}
+        {%- for variant in product.variants -%}
+          <li class="variant-display-grid__item">
+            {%- render 'variant-card',
+              variant: variant,
+              product: product,
+              color_label: variant.title,
+              image_ratio: image_ratio
+            -%}
+          </li>
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>
+
+{% stylesheet %}
+  .variant-display-section {
+    width: 100%;
+    max-width: var(--page-width, 1200px);
+    margin-inline: auto;
+    padding-inline: var(--padding-md, 16px);
+    box-sizing: border-box;
+  }
+
+  .variant-display-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--vd-cols-mobile, 2), 1fr);
+    gap: var(--vd-gap, 16px);
+  }
+
+  @media screen and (min-width: 750px) {
+    .variant-display-grid {
+      grid-template-columns: repeat(var(--vd-cols-desktop, 4), 1fr);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Variant Display Grid",
+  "enabled_on": {
+    "templates": ["collection"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Variant Options"
+    },
+    {
+      "type": "text",
+      "id": "color_option_name",
+      "label": "Color option name",
+      "default": "Color",
+      "info": "The product option name to split by (e.g. Color, Colour, Finish). Must match exactly."
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image ratio",
+      "options": [
+        { "value": "1/1",  "label": "Square" },
+        { "value": "3/4",  "label": "Portrait (3:4)" },
+        { "value": "4/3",  "label": "Landscape (4:3)" }
+      ],
+      "default": "1/1"
+    },
+    {
+      "type": "header",
+      "content": "Grid Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns (desktop)",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "label": "Columns (mobile)",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap between cards",
+      "min": 0,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    }
+  ]
+}
+{% endschema %}
