@@ -1,4 +1,4 @@
-{% layout none %}
+{% include 'product-content.zipifypages', contentprt: 'header' %}{% layout none %}
 {
   "id": {{ product.id | json }},
   "title": {{ product.title | json }},
@@ -55,3 +55,4 @@
   "currentVariant": {{ product.selected_or_first_available_variant.id | json }},
   "isCustomProTemp":true
 }
+{% include 'product-content.zipifypages', contentprt: 'footer' %}
