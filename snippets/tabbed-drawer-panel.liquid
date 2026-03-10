@@ -72,6 +72,11 @@
              {{ block_settings.tabbed_shop_link_3_text }}
            </a>
          {% endif %}
+         {% if block_settings.tabbed_shop_link_4_text != blank %}
+           <a href="{{ block_settings.tabbed_shop_link_4_url | default: '#' }}" class="tabbed-drawer__secondary-link">
+             {{ block_settings.tabbed_shop_link_4_text }}
+           </a>
+         {% endif %}
        </div>
      </div>
 
