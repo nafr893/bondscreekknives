@@ -63,6 +63,120 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
+                "gap": 18,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 48,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_aDmg9K": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<h2>GOVX ID</h2>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_eCaxMH": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>To thank you for your service, we've partnered with GovX to give back and show our respect to servicemembers.</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "button_7ANdfW": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "SAVE UP TO 15%",
+                    "link": "https://auth.govx.com/shopify/verify?shop=bondscreekknives.myshopify.com&utm_source=shopify&utm_medium=govxid&utm_campaign=custom_link",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_aDmg9K",
+                "text_eCaxMH",
+                "button_7ANdfW"
+              ]
+            },
+            "group_8rc3KB": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
@@ -92,39 +206,13 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_BYWfj6": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h1>CONTACT BCK SUPPORT</h1>",
-                    "width": "fit-content",
-                    "max_width": "none",
-                    "alignment": "left",
-                    "type_preset": "h3",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_eCaxMH": {
+                "text_3Wq8FJ": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We’re committed to providing reliable, easy support through the channels listed below. Our team is standing by to help.</p>",
-                    "width": "100%",
-                    "max_width": "none",
+                    "text": "<p><strong>This offer is eligible for:</strong></p><ul><li>Current & former U.S. military</li><li>Military spouses & dependents</li><li>First responders including law enforcement, fire, and EMS</li><li>Federal, state, and local government employees</li></ul><p><strong>How it works:</strong></p><ul><li>Click the button to claim your discount and you'll be asked to verify your affiliation with GovX ID. Verification is real-time and secure. If you already have a GovX ID account, just log in!</li><li>After you verify, you'll receive a single-use discount code to apply at checkout. Be sure to copy your code.</li><li>For future purchases, simply log in with your GovX ID to unlock a new discount code.</li><li>There is a limit of one discount code per day.</li></ul>",
+                    "width": "fit-content",
+                    "max_width": "normal",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
@@ -146,13 +234,65 @@
                 }
               },
               "block_order": [
-                "text_BYWfj6",
-                "text_eCaxMH"
+                "text_3Wq8FJ"
+              ]
+            },
+            "group_dUXzVC": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 50,
+                "width_mobile": "custom",
+                "custom_width_mobile": 50,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "govx_id_exclusive_discounts_govx_id_button_yAKGVg": {
+                  "type": "shopify://apps/govx-id-exclusive-discounts/blocks/govx-id-button/2b41cbab-a2d3-48ab-85b4-09f16dcc4bf0",
+                  "settings": {
+                    "cta_layout": "full",
+                    "cta_prompt": "Discount available for Military, First Responders, Medical Workers and Teachers"
+                  }
+                }
+              },
+              "block_order": [
+                "govx_id_exclusive_discounts_govx_id_button_yAKGVg"
               ]
             },
             "group_4nrQiA": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -278,6 +418,7 @@
             "group_zgihe4": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -381,6 +522,7 @@
             "group_bh4gRW": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -609,6 +751,8 @@
           },
           "block_order": [
             "group_Fkd6Q6",
+            "group_8rc3KB",
+            "group_dUXzVC",
             "group_4nrQiA",
             "group_zgihe4",
             "group_bh4gRW"
@@ -618,7 +762,6 @@
       "block_order": [
         "group_CQqmMY"
       ],
-      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -646,158 +789,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 40,
         "padding-block-end": 40
-      }
-    },
-    "section_FCTy9Q": {
-      "type": "section",
-      "blocks": {
-        "group_fifJGn": {
-          "type": "group",
-          "name": "t:names.group",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "group_9f4LpH": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "text_qG9GNt": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<h3><strong>RETURNS AND WARRANTY</strong></h3><p>We want you to love your Bonds Creek knife. If for <em>any reason</em> you’re not satisfied with your purchase, contact us within <strong>30 days</strong> of delivery and we’ll help make it right. This includes:</p><ul><li>Assistance with fit, finish, or usage questions</li><li>Options for exchange or store credit<br/>(<em>Note:</em> This period applies to unused knives returned in original condition — see <em>Returns</em> below.)</li></ul><h3><strong>2. Returns (Buyer’s Remorse / Unused Products)</strong></h3><p>We accept returns of unused knives within <strong>30 days</strong> of purchase for a <strong>refund or exchange</strong>.<br/>To qualify:</p><ul><li>Knife must be in <em>new, un-used condition</em></li><li>Original packaging, sheath, and all included accessories must be returned</li><li>Customer is responsible for return shipping</li></ul><p>To start a return:</p><ol><li>Contact support at <a><strong>BondsCreekKnives@gmail.com</strong></a></li><li>We’ll issue a return authorization and return shipping instructions</li><li>Once received and inspected, refunds will be issued to the original payment method</li></ol><p><em>Used knives or items not in original condition may not qualify for refund.</em></p><h3><strong>3. Lifetime Warranty (“Bonds Creek Promise”)</strong></h3><p>Every Bonds Creek knife is backed by our <strong>Lifetime Warranty</strong> against <em>defects in materials and craftsmanship</em>. This means:</p><ul><li>We guarantee your blade will perform as intended</li><li>If a manufacturing defect arises, we’ll repair or replace the knife at our discretion</li><li>Warranty is valid for the <em>original purchaser</em> only</li></ul><p>This warranty <strong>does not cover</strong>:</p><ul><li>Normal wear from use (e.g., dulling of the edge)</li><li>Damage due to misuse, abuse, or improper maintenance</li><li>Modifications or alterations made outside our workshop</li><li>Loss, theft, or cosmetic wear that does not affect function</li></ul><p>To file a warranty claim:</p><ol><li>Email <a><strong>BondsCreekKnives@gmail.com</strong></a> with photos and a description of issue</li><li>We’ll provide instructions on how to send the knife in for evaluation</li><li>After evaluation, we’ll repair or replace the knife and return it to you</li></ol><p>We may:</p><ul><li>Sharpen, rewrap handles, or refurbish surfaces</li><li>Replace components or entire knife if necessary<br/></li></ul><h3><strong>4. Generational Service & Sharpening</strong></h3><p>Like the best American-made knife brands, we offer ongoing service to keep your blade going strong. Under our <strong>Bonds Creek Promise</strong>:</p><ul><li>We <em>will</em> sharpen, service, and maintain your Bonds Creek knife for life</li><li>You can send it back anytime for edge restoration or maintenance (return shipping may apply)</li></ul><p><br/></p><h3><strong>5. How to Ship a Knife to Us</strong></h3><ul><li>Package your knife safely — blade covered and secure</li><li>Include your <strong>order number</strong>, contact info, and reason for service/return</li><li>Use a trackable shipping method — we aren’t responsible for items lost in transit</li></ul><p>Shipping address will be provided after you contact support.</p><h3><strong>6. Questions?</strong></h3><p>If anything is unclear or you want help before returning your knife, we’re here to help.<br/><a><strong>BondsCreekKnives@gmail.com</strong></a><br/>We’re committed to knives that work as hard as you do.</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_qG9GNt"
-              ]
-            }
-          },
-          "block_order": [
-            "group_9f4LpH"
-          ]
-        }
-      },
-      "block_order": [
-        "group_fifJGn"
-      ],
-      "name": "t:names.custom_section",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "small",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 48,
-        "padding-block-end": 48
       }
     },
     "main": {
@@ -853,7 +844,6 @@
   },
   "order": [
     "section_nV87Rk",
-    "section_FCTy9Q",
     "main"
   ]
 }
