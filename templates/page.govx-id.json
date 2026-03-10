@@ -118,6 +118,21 @@
                   },
                   "blocks": {}
                 },
+                "button_7ANdfW": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "SAVE 15% NOW",
+                    "link": "https://auth.govx.com/shopify/verify?shop=bondscreekknives.myshopify.com&utm_source=shopify&utm_medium=govxid&utm_campaign=custom_link",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                },
                 "text_eCaxMH": {
                   "type": "text",
                   "name": "t:names.text",
@@ -147,6 +162,7 @@
               },
               "block_order": [
                 "text_BYWfj6",
+                "button_7ANdfW",
                 "text_eCaxMH"
               ]
             },
