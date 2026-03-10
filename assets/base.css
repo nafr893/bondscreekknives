@@ -464,11 +464,11 @@ p:empty {
   background: transparent;
 }
 
-/* Test remove announcment bar issue
+
 .shopify-section:not(.header-section):has(.section) {
   position: relative;
 }
-  */
+  
 
 .shopify-section:not(.header-section) .section-background {
   content: '';
