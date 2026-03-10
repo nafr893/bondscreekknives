@@ -22,10 +22,16 @@ class HeaderMenu extends Component {
    */
   #submenuMutationObserver = null;
 
+  /**
+   * @type {ReturnType<typeof setTimeout> | null}
+   */
+  #deactivateTimer = null;
+
   connectedCallback() {
     super.connectedCallback();
 
-    this.overflowMenu?.addEventListener('pointerleave', () => this.#deactivate());
+    this.overflowMenu?.addEventListener('pointerleave', () => this.#scheduleDeactivate());
+    this.overflowMenu?.addEventListener('pointerenter', () => this.#cancelDeactivate());
     // on load, cache the max height of the submenu so you can use it in a translate
     this.#cacheMaxOverflowMenuHeight();
 
@@ -78,6 +84,7 @@ class HeaderMenu extends Component {
    * @param {PointerEvent | FocusEvent} event
    */
   activate = (event) => {
+    this.#cancelDeactivate();
     this.dispatchEvent(new MegaMenuHoverEvent());
 
     if (!(event.target instanceof Element)) return;
@@ -155,7 +162,22 @@ class HeaderMenu extends Component {
 
     if (isMovingWithinMenu || isMovingToOverflowMenu || isMovingToSubmenu) return;
 
-    this.#deactivate();
+    this.#scheduleDeactivate();
+  }
+
+  /**
+   * Schedule deactivation after a short delay so diagonal mouse movement doesn't close the menu.
+   */
+  #scheduleDeactivate() {
+    this.#cancelDeactivate();
+    this.#deactivateTimer = setTimeout(() => this.#deactivate(), 150);
+  }
+
+  #cancelDeactivate() {
+    if (this.#deactivateTimer !== null) {
+      clearTimeout(this.#deactivateTimer);
+      this.#deactivateTimer = null;
+    }
   }
 
   /**
