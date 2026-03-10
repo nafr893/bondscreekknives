@@ -61,6 +61,93 @@
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
                 "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 18,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_eCaxMH": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>To thank you for your service, we've partnered with GovX to give back and show our respect to servicemembers.</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "center",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "button_7ANdfW": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "SAVE UP TO 15%",
+                    "link": "https://auth.govx.com/shopify/verify?shop=bondscreekknives.myshopify.com&utm_source=shopify&utm_medium=govxid&utm_campaign=custom_link",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_eCaxMH",
+                "button_7ANdfW"
+              ]
+            },
+            "group_8rc3KB": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
@@ -92,54 +179,13 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_BYWfj6": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h1>CONTACT BCK SUPPORT</h1>",
-                    "width": "fit-content",
-                    "max_width": "none",
-                    "alignment": "left",
-                    "type_preset": "h3",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "button_7ANdfW": {
-                  "type": "button",
-                  "name": "t:names.button",
-                  "settings": {
-                    "label": "SAVE 15% NOW",
-                    "link": "https://auth.govx.com/shopify/verify?shop=bondscreekknives.myshopify.com&utm_source=shopify&utm_medium=govxid&utm_campaign=custom_link",
-                    "open_in_new_tab": false,
-                    "style_class": "button",
-                    "width": "fit-content",
-                    "custom_width": 100,
-                    "width_mobile": "fit-content",
-                    "custom_width_mobile": 100
-                  },
-                  "blocks": {}
-                },
-                "text_eCaxMH": {
+                "text_3Wq8FJ": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We’re committed to providing reliable, easy support through the channels listed below. Our team is standing by to help.</p>",
-                    "width": "100%",
-                    "max_width": "none",
+                    "text": "<p><strong>This offer is eligible for:</strong></p><ul><li>Current & former U.S. military</li><li>Military spouses & dependents</li><li>First responders including law enforcement, fire, and EMS</li><li>Federal, state, and local government employees</li></ul><p><strong>How it works:</strong></p><ul><li>Click the button to claim your discount and you'll be asked to verify your affiliation with GovX ID. Verification is real-time and secure. If you already have a GovX ID account, just log in!</li><li>After you verify, you'll receive a single-use discount code to apply at checkout. Be sure to copy your code.</li><li>For future purchases, simply log in with your GovX ID to unlock a new discount code.</li><li>There is a limit of one discount code per day.</li></ul>",
+                    "width": "fit-content",
+                    "max_width": "normal",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
@@ -161,14 +207,65 @@
                 }
               },
               "block_order": [
-                "text_BYWfj6",
-                "button_7ANdfW",
-                "text_eCaxMH"
+                "text_3Wq8FJ"
+              ]
+            },
+            "group_dUXzVC": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 50,
+                "width_mobile": "custom",
+                "custom_width_mobile": 50,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "govx_id_exclusive_discounts_govx_id_button_yAKGVg": {
+                  "type": "shopify://apps/govx-id-exclusive-discounts/blocks/govx-id-button/2b41cbab-a2d3-48ab-85b4-09f16dcc4bf0",
+                  "settings": {
+                    "cta_layout": "full",
+                    "cta_prompt": "Discount available for Military, First Responders, Medical Workers and Teachers"
+                  }
+                }
+              },
+              "block_order": [
+                "govx_id_exclusive_discounts_govx_id_button_yAKGVg"
               ]
             },
             "group_4nrQiA": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -294,6 +391,7 @@
             "group_zgihe4": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -397,6 +495,7 @@
             "group_bh4gRW": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -625,6 +724,8 @@
           },
           "block_order": [
             "group_Fkd6Q6",
+            "group_8rc3KB",
+            "group_dUXzVC",
             "group_4nrQiA",
             "group_zgihe4",
             "group_bh4gRW"
@@ -634,7 +735,6 @@
       "block_order": [
         "group_CQqmMY"
       ],
-      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
