@@ -9,6 +9,10 @@
  */
 {
   "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {}
+    },
     "main": {
       "type": "product-information",
       "blocks": {
@@ -1834,13 +1838,19 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {}
     }
   },
   "order": [
+    "zp-product-header-content",
     "main",
     "divider_7cd4XN",
     "1773085436c554fa66",
     "product_recommendations_qggXJq",
-    "hero_TfEYmg"
+    "hero_TfEYmg",
+    "zp-product-footer-content"
   ]
 }
