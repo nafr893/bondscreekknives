@@ -96,7 +96,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h1>CONTACT BCK SUPPORT</h1>",
+                    "text": "<h1>ABOUT BONDS CREEK KNIVES</h1>",
                     "width": "fit-content",
                     "max_width": "none",
                     "alignment": "left",
@@ -122,7 +122,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We’re committed to providing reliable, easy support through the channels listed below. Our team is standing by to help.</p>",
+                    "text": "<p>At Bonds Creek Knives, we craft more than just knives; we forge traditions. Our commitment to quality, American craftsmanship, reliability, and enduring durability is at the heart of everything we do.</p><p>Quality Craftsmanship: Each of our creations are meticulously handcrafted by an American takes pride in their work. Our dedication to quality is unwavering, ensuring that every knife that leaves our workshop meets the highest standards. We use only the finest materials, combining modern precision with time-honored techniques to create knives that are not just tools, but works of art.</p><p>American Made: We proudly uphold the tradition of American craftsmanship. All Bonds Creek knives are manufactured right here in the United States, supporting local communities and ensuring that every blade carries the spirit of American ingenuity. When you choose a Bonds Creek knife, you're choosing a piece of American heritage.</p><p>Reliability: When you're out in the field, you need a knife you can trust. Bonds Creek Knives are designed to perform consistently, whether you're hunting, camping, or simply tackling everyday tasks. Our knives are built to be reliable companions, standing up to the toughest challenges you can throw at them.</p><p>Built to Last Generations: At Bonds Creek, we don't just create knives for today; we create knives that will be cherished by your children and grandchildren. We understand the value of passing down a well-made tool, and that's why we take extra care in crafting knives that are not only functional but built to last for generations. When you invest in a Bonds Creek knife, you're investing in a legacy.</p><p>Thank you for choosing Bonds Creek Knives. We invite you to explore our collection and experience the difference that true American craftsmanship makes. Join us in celebrating the timeless art of knife making, where quality, reliability, and durability are not just promises but the cornerstone of our brand.</p><p><a href=\"https://skillsetmag.com/article/bonds-creek-badger/\" target=\"_blank\" title=\"The Badger by Bonds Creek Forge \">Want to learn more? Hear what the guys at SkillSetMag.com had to say about our #1 Best Seller</a></p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -153,6 +153,7 @@
             "group_4nrQiA": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -278,6 +279,7 @@
             "group_zgihe4": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -381,6 +383,7 @@
             "group_bh4gRW": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
