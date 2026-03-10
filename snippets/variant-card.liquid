@@ -33,12 +33,12 @@
       {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg variant-card__img' }}
     {%- endif -%}
 
-    {%- if on_sale -%}
-      <span class="variant-card__badge">Sale</span>
-    {%- endif -%}
   </div>
 
   <div class="variant-card__info">
+    {%- if on_sale -%}
+      <span class="variant-card__badge">Sale</span>
+    {%- endif -%}
     <p class="variant-card__title">{{ product.title }}</p>
     {%- if color_label -%}
       <p class="variant-card__color">{{ color_label }}</p>
@@ -69,7 +69,6 @@
   }
 
   .variant-card__image-wrap {
-    position: relative;
     overflow: hidden;
     width: 100%;
     background: var(--color-background-secondary, #f4f4f4);
@@ -83,9 +82,7 @@
   }
 
   .variant-card__badge {
-    position: absolute;
-    top: 8px;
-    left: 8px;
+    display: inline-block;
     background: var(--color-foreground);
     color: var(--color-background);
     font-size: 0.7rem;
@@ -93,6 +90,7 @@
     letter-spacing: 0.05em;
     padding: 3px 8px;
     text-transform: uppercase;
+    align-self: flex-start;
   }
 
   .variant-card__info {
