@@ -54,12 +54,12 @@
         <div class="pair-with__card">
           <div class="pair-with__img-wrap">
             {{ 'product-1' | placeholder_svg_tag: 'pair-with__img' }}
+            <button class="pair-with__add-btn" disabled>{{ button_label }}</button>
           </div>
           <div class="pair-with__info">
             <p class="pair-with__title">Accessory Product</p>
             <p class="pair-with__price">$0.00</p>
           </div>
-          <button class="pair-with__add-btn" disabled>{{ button_label }}</button>
         </div>
       {%- else -%}
         {%- for i in (1..5) -%}
@@ -83,6 +83,18 @@
                   {%- else -%}
                     {{ 'product-1' | placeholder_svg_tag: 'pair-with__img' }}
                   {%- endif -%}
+                  <button
+                    class="pair-with__add-btn"
+                    data-pair-add="{{ block.id }}"
+                    data-variant-id="{{ acc_variant.id }}"
+                    {% unless acc_variant.available %}disabled{% endunless %}
+                  >
+                    {%- if acc_variant.available -%}
+                      {{ button_label }}
+                    {%- else -%}
+                      Sold Out
+                    {%- endif -%}
+                  </button>
                 </div>
               </a>
               <div class="pair-with__info">
@@ -91,18 +103,6 @@
                 </a>
                 <p class="pair-with__price">{{ acc_variant.price | money }}</p>
               </div>
-              <button
-                class="pair-with__add-btn"
-                data-pair-add="{{ block.id }}"
-                data-variant-id="{{ acc_variant.id }}"
-                {% unless acc_variant.available %}disabled{% endunless %}
-              >
-                {%- if acc_variant.available -%}
-                  {{ button_label }}
-                {%- else -%}
-                  Sold Out
-                {%- endif -%}
-              </button>
             </div>
           {%- endif -%}
         {%- endfor -%}
@@ -146,9 +146,7 @@
       const variantId = btn.dataset.variantId;
       if (!variantId) return;
 
-      const original = btn.textContent.trim();
       btn.disabled = true;
-      btn.textContent = '...';
 
       try {
         const res = await fetch('/cart/add.js', {
@@ -158,24 +156,11 @@
         });
 
         if (res.ok) {
-          btn.textContent = 'Added!';
-          // Refresh cart drawer / icon
-          document.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
-          // Fallback: update count by re-fetching cart
-          fetch('/cart.js')
-            .then(r => r.json())
-            .then(cart => {
-              const badge = document.querySelector('[data-cart-count], .cart-count-bubble, #cart-icon-bubble');
-              if (badge) badge.textContent = cart.item_count;
-            });
-          setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
-        } else {
-          btn.textContent = 'Error';
-          setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
+          // Trigger the theme's cart:update event — opens the drawer and refreshes cart items
+          document.dispatchEvent(new CustomEvent('cart:update', { bubbles: true, detail: { data: {} } }));
         }
-      } catch {
-        btn.textContent = 'Error';
-        setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
+      } finally {
+        btn.disabled = false;
       }
     });
   }
@@ -242,8 +227,7 @@
     grid-column: 1;
     grid-row: 1;
     display: flex;
-    align-items: center;
-    gap: 16px;
+    align-items: stretch;
     background: var(--color-background-secondary, rgb(var(--color-foreground-rgb) / 0.05));
     border-radius: var(--border-radius, 4px);
     overflow: hidden;
@@ -260,14 +244,15 @@
   .pair-with__img-link {
     display: block;
     flex-shrink: 0;
+    position: relative;
   }
 
   .pair-with__img-wrap {
     width: 110px;
     height: 110px;
-    flex-shrink: 0;
     background: rgb(var(--color-foreground-rgb) / 0.07);
     overflow: hidden;
+    position: relative;
   }
 
   .pair-with__img,
@@ -278,13 +263,42 @@
     display: block;
   }
 
+  .pair-with__add-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-block: 7px;
+    border: none;
+    background: rgb(var(--color-foreground-rgb) / 0.82);
+    color: var(--color-background);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.15s;
+    backdrop-filter: blur(2px);
+  }
+
+  .pair-with__add-btn:hover:not(:disabled) {
+    background: rgb(var(--color-foreground-rgb) / 0.95);
+  }
+
+  .pair-with__add-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   .pair-with__info {
     flex: 1;
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    padding-block: 12px;
+    justify-content: center;
+    gap: 4px;
+    padding-inline: 16px;
   }
 
   .pair-with__title-link {
@@ -307,37 +321,12 @@
     margin: 0;
     font-size: 0.9rem;
   }
-
-  .pair-with__add-btn {
-    flex-shrink: 0;
-    align-self: stretch;
-    width: 72px;
-    border: none;
-    background: var(--color-button, var(--color-foreground));
-    color: var(--color-button-label, var(--color-background));
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: opacity 0.15s;
-    margin-inline-start: auto;
-  }
-
-  .pair-with__add-btn:hover:not(:disabled) {
-    opacity: 0.85;
-  }
-
-  .pair-with__add-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
 {% endstylesheet %}
 
 {% schema %}
 {
   "name": "Pair With",
-  "tag": null,
+  "tag": "div",
   "settings": [
     {
       "type": "text",
