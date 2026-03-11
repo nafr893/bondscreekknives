@@ -410,6 +410,22 @@
               },
               "blocks": {}
             },
+            "pair_with_icM8iz": {
+              "type": "pair-with",
+              "name": "Pair With",
+              "settings": {
+                "heading": "PAIR WITH",
+                "button_label": "ADD",
+                "product_1": "tek-lok",
+                "product_2": "ulti-clip-2-2",
+                "product_3": "",
+                "product_4": "",
+                "product_5": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
               "settings": {
@@ -1499,6 +1515,7 @@
             "group_icgrde",
             "divider_VJhene",
             "variant_picker_R3rGDr",
+            "pair_with_icM8iz",
             "buy_buttons_eYQEYi",
             "group_MeJQJx",
             "accordion_4GbhFg",
