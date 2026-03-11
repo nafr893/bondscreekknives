@@ -60,7 +60,11 @@
             <p class="pair-with__title">Accessory Product</p>
             <p class="pair-with__price">$0.00</p>
           </div>
-          <button class="pair-with__add-btn" disabled>{{ button_label }}</button>
+          <div class="pair-with__switch-wrap">
+            <button class="pair-with__switch" role="switch" aria-checked="false" disabled>
+              <span class="pair-with__switch-thumb"></span>
+            </button>
+          </div>
         </div>
       {%- else -%}
         {%- for i in (1..5) -%}
@@ -92,18 +96,19 @@
                 </a>
                 <p class="pair-with__price">{{ acc_variant.price | money }}</p>
               </div>
-              <button
-                class="pair-with__add-btn"
-                data-pair-add="{{ block.id }}"
-                data-variant-id="{{ acc_variant.id }}"
-                {% unless acc_variant.available %}disabled{% endunless %}
-              >
-                {%- if acc_variant.available -%}
-                  {{ button_label }}
-                {%- else -%}
-                  Sold Out
-                {%- endif -%}
-              </button>
+              <div class="pair-with__switch-wrap">
+                <button
+                  class="pair-with__switch"
+                  role="switch"
+                  aria-checked="false"
+                  data-pair-add="{{ block.id }}"
+                  data-variant-id="{{ acc_variant.id }}"
+                  {% unless acc_variant.available %}disabled{% endunless %}
+                  aria-label="Add {{ acc.title }} to cart"
+                >
+                  <span class="pair-with__switch-thumb"></span>
+                </button>
+              </div>
             </div>
           {%- endif -%}
         {%- endfor -%}
@@ -141,29 +146,50 @@
     }
     show(0);
 
-    // AJAX add to cart
+    // Toggle switch: add or remove from cart
     track.addEventListener('click', async (e) => {
-      const btn = e.target.closest('[data-pair-add]');
-      if (!btn || btn.disabled) return;
+      const sw = e.target.closest('[data-pair-add]');
+      if (!sw || sw.disabled) return;
 
-      const variantId = btn.dataset.variantId;
+      const variantId = sw.dataset.variantId;
       if (!variantId) return;
 
-      btn.disabled = true;
+      const isOn = sw.getAttribute('aria-checked') === 'true';
+      sw.disabled = true;
 
       try {
-        const res = await fetch('/cart/add.js', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({ id: variantId, quantity: 1 })
-        });
-
-        if (res.ok) {
-          // Trigger the theme's cart:update event — opens the drawer and refreshes cart items
-          document.dispatchEvent(new CustomEvent('cart:update', { bubbles: true, detail: { data: {} } }));
+        if (!isOn) {
+          // Add to cart
+          const res = await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ id: variantId, quantity: 1 })
+          });
+          if (res.ok) {
+            sw.setAttribute('aria-checked', 'true');
+            document.dispatchEvent(new CustomEvent('cart:update', { bubbles: true, detail: { data: {} } }));
+          }
+        } else {
+          // Remove from cart: find line item key then set qty to 0
+          const cartRes = await fetch('/cart.js', { headers: { 'Accept': 'application/json' } });
+          if (cartRes.ok) {
+            const cart = await cartRes.json();
+            const item = cart.items.find(i => String(i.variant_id) === String(variantId));
+            if (item) {
+              const changeRes = await fetch('/cart/change.js', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ id: item.key, quantity: 0 })
+              });
+              if (changeRes.ok) {
+                sw.setAttribute('aria-checked', 'false');
+                document.dispatchEvent(new CustomEvent('cart:update', { bubbles: true, detail: { data: {} } }));
+              }
+            }
+          }
         }
       } finally {
-        btn.disabled = false;
+        sw.disabled = false;
       }
     });
   }
@@ -258,29 +284,47 @@
     display: block;
   }
 
-  .pair-with__add-btn {
+  .pair-with__switch-wrap {
     flex-shrink: 0;
-    align-self: stretch;
-    width: 76px;
+    align-self: center;
+    padding-inline: 16px;
+  }
+
+  .pair-with__switch {
+    display: flex;
+    align-items: center;
+    width: 52px;
+    height: 28px;
+    padding: 4px;
     border: none;
-    border-inline-start: 1px solid rgb(var(--color-foreground-rgb) / 0.08);
-    background: var(--color-background-secondary, rgb(var(--color-foreground-rgb) / 0.08));
-    color: var(--color-foreground);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    border-radius: 0;
+    background: rgb(var(--color-foreground-rgb) / 0.18);
     cursor: pointer;
-    transition: background 0.15s;
+    transition: background 0.2s ease;
   }
 
-  .pair-with__add-btn:hover:not(:disabled) {
-    background: rgb(var(--color-foreground-rgb) / 0.14);
+  .pair-with__switch[aria-checked='true'] {
+    background: var(--color-foreground);
   }
 
-  .pair-with__add-btn:disabled {
-    opacity: 0.45;
+  .pair-with__switch:disabled {
+    opacity: 0.4;
     cursor: not-allowed;
+  }
+
+  .pair-with__switch-thumb {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    background: var(--color-background);
+    transform: translateX(0);
+    transition: transform 0.2s ease;
+    pointer-events: none;
+  }
+
+  .pair-with__switch[aria-checked='true'] .pair-with__switch-thumb {
+    transform: translateX(24px);
   }
 
   .pair-with__info {
