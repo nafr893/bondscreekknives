@@ -146,51 +146,33 @@
     }
     show(0);
 
-    // Toggle switch: add or remove from cart
-    track.addEventListener('click', async (e) => {
+    // Switch: toggle visual state only — no cart interaction yet
+    track.addEventListener('click', (e) => {
       const sw = e.target.closest('[data-pair-add]');
       if (!sw || sw.disabled) return;
-
-      const variantId = sw.dataset.variantId;
-      if (!variantId) return;
-
       const isOn = sw.getAttribute('aria-checked') === 'true';
-      sw.disabled = true;
+      sw.setAttribute('aria-checked', isOn ? 'false' : 'true');
+    });
 
-      try {
-        if (!isOn) {
-          // Add to cart
-          const res = await fetch('/cart/add.js', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify({ id: variantId, quantity: 1 })
-          });
-          if (res.ok) {
-            sw.setAttribute('aria-checked', 'true');
-            document.dispatchEvent(new CustomEvent('cart:update', { bubbles: true, detail: { data: {} } }));
-          }
-        } else {
-          // Remove from cart: find line item key then set qty to 0
-          const cartRes = await fetch('/cart.js', { headers: { 'Accept': 'application/json' } });
-          if (cartRes.ok) {
-            const cart = await cartRes.json();
-            const item = cart.items.find(i => String(i.variant_id) === String(variantId));
-            if (item) {
-              const changeRes = await fetch('/cart/change.js', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify({ id: item.key, quantity: 0 })
-              });
-              if (changeRes.ok) {
-                sw.setAttribute('aria-checked', 'false');
-                document.dispatchEvent(new CustomEvent('cart:update', { bubbles: true, detail: { data: {} } }));
-              }
-            }
-          }
-        }
-      } finally {
-        sw.disabled = false;
+    // When the main product form adds to cart, piggyback any toggled accessories
+    document.addEventListener('cart:update', async (e) => {
+      if (e.detail?.data?.source !== 'product-form-component') return;
+
+      const checked = Array.from(track.querySelectorAll('[data-pair-add][aria-checked="true"]'));
+      if (!checked.length) return;
+
+      for (const sw of checked) {
+        const variantId = sw.dataset.variantId;
+        if (!variantId) continue;
+        await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ id: variantId, quantity: 1 })
+        });
       }
+
+      // Refresh cart drawer with the newly added accessories
+      document.dispatchEvent(new CustomEvent('cart:update', { bubbles: true, detail: { data: {} } }));
     });
   }
 
