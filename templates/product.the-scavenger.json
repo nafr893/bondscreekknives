@@ -959,7 +959,7 @@
                               "type": "custom-label",
                               "name": "Custom label",
                               "settings": {
-                                "text": "EVERYDAY WORK",
+                                "text": "FIELD DRESSING",
                                 "link": "",
                                 "text_color": "#000000",
                                 "bg_color": "#f9f9f9",
@@ -1489,6 +1489,7 @@
             "video_U7bWTH": {
               "type": "video",
               "name": "t:names.video",
+              "disabled": true,
               "settings": {
                 "source": "url",
                 "video_url": "https://www.youtube.com/watch?v=R1nk14G4NRE&t=3s",
