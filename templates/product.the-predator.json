@@ -230,7 +230,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p><a href=\"/pages/hard-use\" title=\"Bonds Creek Knives: Handcrafted Blades for Hard Work, Hard Play & Everyday Use\">MADE IN USA</a></p>",
+                        "text": "<p>MADE IN USA</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
