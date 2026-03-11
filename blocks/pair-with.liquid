@@ -1,0 +1,419 @@
+{%- doc -%}
+  "Pair With" accessory slider block for product pages.
+  Shows up to 5 manually selected products as horizontal cards
+  with an AJAX "ADD" button on each.
+{%- enddoc -%}
+
+{%- liquid
+  assign heading      = block.settings.heading | default: 'PAIR WITH'
+  assign button_label = block.settings.button_label | default: 'ADD'
+
+  assign accessory_products = ''
+  for i in (1..5)
+    assign key = 'product_' | append: i
+    assign p   = block.settings[key]
+    if p != blank
+      assign accessory_products = accessory_products | append: p.id | append: ','
+    endif
+  endfor
+  assign accessory_products = accessory_products | split: ','
+  assign accessory_products = accessory_products | compact
+-%}
+
+{%- if accessory_products.size > 0 or request.visual_preview_mode -%}
+  <div
+    class="pair-with spacing-style"
+    style="{% render 'spacing-style', settings: block.settings %}"
+    {{ block.shopify_attributes }}
+  >
+    <div class="pair-with__header">
+      <h3 class="pair-with__heading">{{ heading }}</h3>
+      {%- if accessory_products.size > 1 or request.visual_preview_mode -%}
+        <div class="pair-with__nav">
+          <button
+            class="pair-with__nav-btn"
+            aria-label="Previous"
+            data-pair-prev="{{ block.id }}"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button
+            class="pair-with__nav-btn"
+            aria-label="Next"
+            data-pair-next="{{ block.id }}"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="pair-with__track" data-pair-track="{{ block.id }}">
+      {%- if request.visual_preview_mode and accessory_products.size == 0 -%}
+        {%- comment -%} Editor preview: show a placeholder card {%- endcomment -%}
+        <div class="pair-with__card">
+          <div class="pair-with__img-wrap">
+            {{ 'product-1' | placeholder_svg_tag: 'pair-with__img' }}
+          </div>
+          <div class="pair-with__info">
+            <p class="pair-with__title">Accessory Product</p>
+            <p class="pair-with__price">$0.00</p>
+          </div>
+          <button class="pair-with__add-btn" disabled>{{ button_label }}</button>
+        </div>
+      {%- else -%}
+        {%- for i in (1..5) -%}
+          {%- assign key = 'product_' | append: i -%}
+          {%- assign acc = block.settings[key] -%}
+          {%- if acc != blank -%}
+            {%- assign acc_variant = acc.selected_or_first_available_variant -%}
+            <div class="pair-with__card" data-pair-variant="{{ acc_variant.id }}" data-pair-available="{{ acc_variant.available }}">
+              <a href="{{ acc.url }}" class="pair-with__img-link" tabindex="-1" aria-hidden="true">
+                <div class="pair-with__img-wrap">
+                  {%- if acc.featured_media -%}
+                    {{
+                      acc.featured_media.preview_image
+                      | image_url: width: 200
+                      | image_tag:
+                        class: 'pair-with__img',
+                        loading: 'lazy',
+                        alt: acc.title,
+                        widths: '100, 150, 200'
+                    }}
+                  {%- else -%}
+                    {{ 'product-1' | placeholder_svg_tag: 'pair-with__img' }}
+                  {%- endif -%}
+                </div>
+              </a>
+              <div class="pair-with__info">
+                <a href="{{ acc.url }}" class="pair-with__title-link">
+                  <p class="pair-with__title">{{ acc.title }}</p>
+                </a>
+                <p class="pair-with__price">{{ acc_variant.price | money }}</p>
+              </div>
+              <button
+                class="pair-with__add-btn"
+                data-pair-add="{{ block.id }}"
+                data-variant-id="{{ acc_variant.id }}"
+                {% unless acc_variant.available %}disabled{% endunless %}
+              >
+                {%- if acc_variant.available -%}
+                  {{ button_label }}
+                {%- else -%}
+                  Sold Out
+                {%- endif -%}
+              </button>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+<script>
+(function () {
+  const BLOCK_ID = {{ block.id | json }};
+
+  function init() {
+    const track  = document.querySelector(`[data-pair-track="${BLOCK_ID}"]`);
+    const prevBtn = document.querySelector(`[data-pair-prev="${BLOCK_ID}"]`);
+    const nextBtn = document.querySelector(`[data-pair-next="${BLOCK_ID}"]`);
+    if (!track) return;
+
+    let current = 0;
+    const cards = Array.from(track.querySelectorAll('.pair-with__card'));
+
+    function show(index) {
+      current = ((index % cards.length) + cards.length) % cards.length;
+      cards.forEach((card, i) => {
+        card.classList.toggle('pair-with__card--active', i === current);
+        card.setAttribute('aria-hidden', i !== current ? 'true' : 'false');
+      });
+    }
+
+    if (cards.length > 1) {
+      prevBtn?.addEventListener('click', () => show(current - 1));
+      nextBtn?.addEventListener('click', () => show(current + 1));
+    }
+    show(0);
+
+    // AJAX add to cart
+    track.addEventListener('click', async (e) => {
+      const btn = e.target.closest('[data-pair-add]');
+      if (!btn || btn.disabled) return;
+
+      const variantId = btn.dataset.variantId;
+      if (!variantId) return;
+
+      const original = btn.textContent.trim();
+      btn.disabled = true;
+      btn.textContent = '...';
+
+      try {
+        const res = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ id: variantId, quantity: 1 })
+        });
+
+        if (res.ok) {
+          btn.textContent = 'Added!';
+          // Refresh cart drawer / icon
+          document.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
+          // Fallback: update count by re-fetching cart
+          fetch('/cart.js')
+            .then(r => r.json())
+            .then(cart => {
+              const badge = document.querySelector('[data-cart-count], .cart-count-bubble, #cart-icon-bubble');
+              if (badge) badge.textContent = cart.item_count;
+            });
+          setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
+        } else {
+          btn.textContent = 'Error';
+          setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
+        }
+      } catch {
+        btn.textContent = 'Error';
+        setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 2000);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+{% stylesheet %}
+  .pair-with {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pair-with__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .pair-with__heading {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .pair-with__nav {
+    display: flex;
+    gap: 8px;
+  }
+
+  .pair-with__nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background: var(--color-background);
+    color: var(--color-foreground);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .pair-with__nav-btn:hover {
+    background: rgb(var(--color-foreground-rgb) / 0.07);
+  }
+
+  .pair-with__track {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .pair-with__card {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--color-background-secondary, rgb(var(--color-foreground-rgb) / 0.05));
+    border-radius: var(--border-radius, 4px);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .pair-with__card--active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .pair-with__img-link {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .pair-with__img-wrap {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    background: rgb(var(--color-foreground-rgb) / 0.07);
+    overflow: hidden;
+  }
+
+  .pair-with__img,
+  .pair-with__img-wrap svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .pair-with__info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-block: 12px;
+  }
+
+  .pair-with__title-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .pair-with__title-link:hover .pair-with__title {
+    text-decoration: underline;
+  }
+
+  .pair-with__title {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .pair-with__price {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .pair-with__add-btn {
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 72px;
+    border: none;
+    background: var(--color-button, var(--color-foreground));
+    color: var(--color-button-label, var(--color-background));
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    margin-inline-start: auto;
+  }
+
+  .pair-with__add-btn:hover:not(:disabled) {
+    opacity: 0.85;
+  }
+
+  .pair-with__add-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Pair With",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "PAIR WITH"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Add button label",
+      "default": "ADD"
+    },
+    {
+      "type": "header",
+      "content": "Accessory Products"
+    },
+    {
+      "type": "paragraph",
+      "content": "Select up to 5 accessory products to show in the slider for this product."
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Accessory 1"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Accessory 2"
+    },
+    {
+      "type": "product",
+      "id": "product_3",
+      "label": "Accessory 3"
+    },
+    {
+      "type": "product",
+      "id": "product_4",
+      "label": "Accessory 4"
+    },
+    {
+      "type": "product",
+      "id": "product_5",
+      "label": "Accessory 5"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pair With",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
