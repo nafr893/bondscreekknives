@@ -49,6 +49,7 @@
     </div>
 
     <div class="pair-with__track" data-pair-track="{{ block.id }}">
+      <div class="pair-with__slides">
       {%- if request.visual_preview_mode and accessory_products.size == 0 -%}
         {%- comment -%} Editor preview: show a placeholder card {%- endcomment -%}
         <div class="pair-with__card">
@@ -107,6 +108,7 @@
           {%- endif -%}
         {%- endfor -%}
       {%- endif -%}
+      </div>
     </div>
   </div>
 {%- endif -%}
@@ -122,12 +124,13 @@
     if (!track) return;
 
     let current = 0;
-    const cards = Array.from(track.querySelectorAll('.pair-with__card'));
+    const slides = track.querySelector('.pair-with__slides');
+    const cards  = Array.from(track.querySelectorAll('.pair-with__card'));
 
     function show(index) {
       current = ((index % cards.length) + cards.length) % cards.length;
+      if (slides) slides.style.transform = `translateX(${current * -100}%)`;
       cards.forEach((card, i) => {
-        card.classList.toggle('pair-with__card--active', i === current);
         card.setAttribute('aria-hidden', i !== current ? 'true' : 'false');
       });
     }
@@ -218,27 +221,21 @@
   }
 
   .pair-with__track {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    overflow: hidden;
+    border-radius: var(--border-radius, 4px);
+  }
+
+  .pair-with__slides {
+    display: flex;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .pair-with__card {
-    grid-column: 1;
-    grid-row: 1;
+    flex: 0 0 100%;
     display: flex;
     align-items: stretch;
     background: var(--color-background-secondary, rgb(var(--color-foreground-rgb) / 0.05));
-    border-radius: var(--border-radius, 4px);
     overflow: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-  }
-
-  .pair-with__card--active {
-    opacity: 1;
-    pointer-events: auto;
   }
 
   .pair-with__img-link {
