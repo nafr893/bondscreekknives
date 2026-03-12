@@ -172,6 +172,7 @@
                 "group_LLem4q": {
                   "type": "group",
                   "name": "t:names.group",
+                  "disabled": true,
                   "settings": {
                     "content_direction": "row",
                     "vertical_on_mobile": false,
@@ -230,7 +231,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>MADE IN USA</p>",
+                        "text": "<p><a href=\"/pages/hard-use\" title=\"Bonds Creek Knives: Handcrafted Blades for Hard Work, Hard Play & Everyday Use\">MADE IN USA</a></p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -335,8 +336,8 @@
                   "name": "t:names.text",
                   "settings": {
                     "text": "<p>{{ closest.product.metafields.custom.short_description | metafield_tag }}</p>",
-                    "width": "100%",
-                    "max_width": "none",
+                    "width": "fit-content",
+                    "max_width": "normal",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
@@ -413,8 +414,9 @@
             "pair_with_icM8iz": {
               "type": "pair-with",
               "name": "Pair With",
+              "disabled": true,
               "settings": {
-                "heading": "SHEATH ATTACHMENT TYPE",
+                "heading": "PAIR WITH",
                 "button_label": "ADD",
                 "product_1": "tek-lok",
                 "product_2": "ulti-clip-2-2",
@@ -847,6 +849,7 @@
                         "group_LDmEFf": {
                           "type": "group",
                           "name": "t:names.group",
+                          "disabled": true,
                           "settings": {
                             "content_direction": "column",
                             "vertical_on_mobile": true,
@@ -918,6 +921,7 @@
                         "group_qC3EQ3": {
                           "type": "group",
                           "name": "t:names.group",
+                          "disabled": true,
                           "settings": {
                             "content_direction": "column",
                             "vertical_on_mobile": true,
@@ -1015,6 +1019,7 @@
                 },
                 "accordion_row_eDbTVe": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "MANUFACTURING",
                     "open_by_default": false,
@@ -1442,6 +1447,7 @@
                 },
                 "accordion_row_BnPFNL": {
                   "type": "_accordion-row",
+                  "disabled": true,
                   "settings": {
                     "heading": "QUICK SPECS",
                     "open_by_default": false,
@@ -1489,6 +1495,7 @@
             "video_U7bWTH": {
               "type": "video",
               "name": "t:names.video",
+              "disabled": true,
               "settings": {
                 "source": "url",
                 "video_url": "https://www.youtube.com/watch?v=R1nk14G4NRE&t=3s",

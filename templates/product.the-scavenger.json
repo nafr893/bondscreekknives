@@ -335,8 +335,8 @@
                   "name": "t:names.text",
                   "settings": {
                     "text": "<p>{{ closest.product.metafields.custom.short_description | metafield_tag }}</p>",
-                    "width": "100%",
-                    "max_width": "none",
+                    "width": "fit-content",
+                    "max_width": "normal",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
@@ -414,7 +414,7 @@
               "type": "pair-with",
               "name": "Pair With",
               "settings": {
-                "heading": "SHEATH ATTACHMENT TYPE",
+                "heading": "PAIR WITH",
                 "button_label": "ADD",
                 "product_1": "tek-lok",
                 "product_2": "ulti-clip-2-2",
@@ -959,7 +959,7 @@
                               "type": "custom-label",
                               "name": "Custom label",
                               "settings": {
-                                "text": "EVERYDAY WORK",
+                                "text": "FIELD DRESSING",
                                 "link": "",
                                 "text_color": "#000000",
                                 "bg_color": "#f9f9f9",
@@ -1452,7 +1452,7 @@
                     "text_a7ykTL": {
                       "type": "text",
                       "settings": {
-                        "text": "<p><strong>Blade Steel:</strong> 52100 High Carbon Steel<br/><strong>Blade Length:</strong> 2.5\"<br/><strong>Overall Length:</strong> 6.25\"<br/><strong>Blade Grind:</strong> Saber Ground<br/><strong>Blade Spine Thickness:</strong> 1/8\"<br/><strong>Heat Treatment:</strong> 60–61 HRC<br/><strong>Knife Weight:</strong> 3 oz<br/><strong>Weight (Sheathed):</strong> 5 oz<br/><strong>Handle Material:</strong> G10<br/><strong>Handle Colors:</strong> Camo, Cinder, Blaze Orange<br/><strong>Blade Finish Options:</strong> Satin Black Powdercoat, Hi-Vis Orange Powdercoat<br/><strong>Spine:</strong> Textured<br/><strong>Sheath:</strong> Ambidextrous, Multi-Orientation Carry<br/><strong>Lanyard Hole:</strong> Yes (at Hilt)<br/><strong>Use:</strong> Everyday Carry / Work Knife</p>",
+                        "text": "<p><strong>Blade Steel</strong>: 52100 High Carbon Steel<br/><strong>Cutting Edge Length</strong>: 4\"<br/><strong>Overall Length</strong>: 9\"<br/><strong>Knife Weight</strong>: 6 oz<br/><strong>Sheathed Weight</strong>: 8.5 oz<br/><strong>Handle Material</strong>: G10<br/><strong>Handle Colors</strong>: Camo, Cinder<br/><strong>Blade Finish</strong>: Satin Black Powdercoat<br/><strong>Blade Grind</strong>: Deep Hollow Grind<br/><strong>Spine</strong>: Textured<br/><strong>Hardness</strong>: 60–61 HRC<br/><strong>Edge Performance</strong>: Easy to sharpen with excellent edge retention<br/><strong>Blade Profile</strong>: Large sweeping belly designed for skinning and capping hide<br/><strong>Sheath</strong>: Ambidextrous<br/><strong>Primary Use</strong>: Skinning / game processing knife</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1489,6 +1489,7 @@
             "video_U7bWTH": {
               "type": "video",
               "name": "t:names.video",
+              "disabled": true,
               "settings": {
                 "source": "url",
                 "video_url": "https://www.youtube.com/watch?v=R1nk14G4NRE&t=3s",
