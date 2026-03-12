@@ -134,7 +134,10 @@
 
     function show(index) {
       current = ((index % cards.length) + cards.length) % cards.length;
-      if (slides) slides.style.transform = `translateX(${current * -100}%)`;
+      if (slides && cards[0]) {
+        const cardWidth = cards[0].offsetWidth + 8; // card width + margin-right
+        slides.style.transform = `translateX(${current * -cardWidth}px)`;
+      }
       cards.forEach((card, i) => {
         card.setAttribute('aria-hidden', i !== current ? 'true' : 'false');
       });
@@ -231,8 +234,6 @@
 
   .pair-with__track {
     overflow: hidden;
-    border-radius: var(--border-radius, 4px);
-    border: 1px solid #d5d5d5;
   }
 
   .pair-with__slides {
@@ -241,11 +242,13 @@
   }
 
   .pair-with__card {
-    flex: 0 0 100%;
+    flex: 0 0 calc(100% - 48px);
     display: flex;
     align-items: stretch;
     background: var(--color-background-secondary, rgb(var(--color-foreground-rgb) / 0.05));
     overflow: hidden;
+    margin-right: 8px;
+    border: 1px solid #d5d5d5;
   }
 
   .pair-with__img-link {
