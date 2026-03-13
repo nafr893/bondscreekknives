@@ -263,6 +263,7 @@
                 "image_TgVTK9": {
                   "type": "image",
                   "name": "t:names.image",
+                  "disabled": true,
                   "settings": {
                     "image": "shopify://shop_images/IMG_8462_1.jpg",
                     "link": "",
