@@ -359,7 +359,7 @@
                   "settings": {
                     "image": "shopify://shop_images/IMG_8965.jpg",
                     "link": "",
-                    "image_ratio": "square",
+                    "image_ratio": "portrait",
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
