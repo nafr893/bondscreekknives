@@ -146,7 +146,7 @@
             "content_direction": "row",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
+            "vertical_alignment": "flex-start",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
@@ -173,8 +173,8 @@
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-start": 48,
+            "padding-block-end": 48,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -223,7 +223,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>At Bonds Creek Knives, every step of the process happens under our roof. From raw steel to finished tool, nothing gets farmed out and nothing leaves our shop until it’s done right. Keeping everything in-house gives us complete control over the quality of every knife that carries our name. If it says Bonds Creek on it, it was built here.</p><p>Our blades start with precision laser profile lasering and CNC milling the primary bevels. This allows us to hold tight tolerances and keep every knife consistent where it matters most. From there the blades are heat treated, quenched, and coated in-house, ensuring the steel performs the way it’s supposed to in the real world. We’re not guessing or relying on someone else’s process...we control it.</p><p>After coating, every knife is sharpened by hand. We finish each edge on a leather buffing wheel to refine it and bring it to a clean, durable edge. It’s the kind of sharpness you only get when a person—not a machine—takes the time to finish the job properly.</p><p>Our kydex sheaths are vacuum formed right here in the shop as well. They’re molded specifically to our knives for a secure fit and dependable retention, whether the knife is riding on your belt, pack, or chest rig.</p><p>Most importantly, the people building these knives are hunters themselves. Everyone in this shop spends time in the woods and understands what a knife is actually supposed to do. That perspective drives every decision we make, from blade geometry to edge finish. These aren’t just knives made in a factory...they’re tools built by hunters for hunters.</p>",
+                    "text": "<p>At Bonds Creek Knives, every step of the process happens under our roof. From raw steel to finished tool, nothing gets farmed out and nothing leaves our shop until it’s done right. Keeping everything in-house gives us complete control over the quality of every knife that carries our name. If it says Bonds Creek on it, it was built here.</p><p>Our blades start with precision laser profile lasering and CNC milling the primary bevels. This allows us to hold tight tolerances and keep every knife consistent where it matters most. From there the blades are heat treated, quenched, and coated in-house, ensuring the steel performs the way it’s supposed to in the real world. We’re not guessing or relying on someone else’s process...we control it.</p><p>After coating, every knife is sharpened by hand. We finish each edge on a leather buffing wheel to refine it and bring it to a clean, durable edge. It’s the kind of sharpness you only get when a person, not a machine, takes the time to finish the job properly.</p><p>Our kydex sheaths are vacuum formed right here in the shop as well. They’re molded specifically to our knives for a secure fit and dependable retention, whether the knife is riding on your belt, pack, or chest rig.</p><p>Most importantly, the people building these knives are hunters themselves. Everyone in this shop spends time in the woods and understands what a knife is actually supposed to do. That perspective drives every decision we make, from blade geometry to edge finish. These aren’t just knives made in a factory...they’re tools built by hunters for hunters.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -294,8 +294,32 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
+                    "image": "shopify://shop_images/IMG_8953.jpg",
                     "link": "",
                     "image_ratio": "adapt",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "image_QQ3a8d": {
+                  "type": "image",
+                  "name": "t:names.image",
+                  "settings": {
+                    "image": "shopify://shop_images/IMG_8965.jpg",
+                    "link": "",
+                    "image_ratio": "square",
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -314,7 +338,8 @@
                 }
               },
               "block_order": [
-                "image_tJMbjB"
+                "image_tJMbjB",
+                "image_QQ3a8d"
               ]
             }
           },
