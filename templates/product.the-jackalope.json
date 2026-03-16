@@ -334,7 +334,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>{{ closest.product.metafields.custom.short_description | metafield_tag }}</p>",
+                    "text": "<p><br/>For fur, feathers, trout, and spring morning Longbeards.<br/></p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -959,7 +959,7 @@
                               "type": "custom-label",
                               "name": "Custom label",
                               "settings": {
-                                "text": "EVERYDAY WORK",
+                                "text": "SMALL GAME | TURKEY | UPLAND BIRD | TROUT",
                                 "link": "",
                                 "text_color": "#000000",
                                 "bg_color": "#f9f9f9",
