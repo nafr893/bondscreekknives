@@ -19,7 +19,7 @@
        class="tabbed-drawer__tab"
        href="{{ block_settings.tabbed_new_tab_url | default: '/collections/new' }}"
      >
-       {{ tab | upcase }}
+       {{ block_settings.tabbed_new_tab_label | default: 'NEW' }}
      </a>
    {% else %}
      <button
@@ -32,7 +32,7 @@
        on:click="tabbed-header-drawer/switchTab?tabId={{ tab }}"
        ref="tabButtons[]"
      >
-       {{ tab | upcase }}
+       {{ block_settings.tabbed_new_tab_label | default: 'NEW' }}
      </button>
    {% endif %}
  {% endfor %}

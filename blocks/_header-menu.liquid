@@ -794,7 +794,7 @@
 {% schema %}
 {
   "name": "t:names.menu",
-  "tag": null,
+  "tag": "div",
   "settings": [
     {
       "type": "link_list",
@@ -1509,6 +1509,24 @@
       "type": "url",
       "id": "tabbed_explore_link_6_url",
       "label": "Link 6 URL",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "header",
+      "content": "Tabbed Drawer - \"New\" Tab Link",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_new_tab_label",
+      "label": "\"New\" Tab Label",
+      "default": "NEW",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_new_tab_url",
+      "label": "\"New\" Tab Link URL",
       "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
     },
     {
