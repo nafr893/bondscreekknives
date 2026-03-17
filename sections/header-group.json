@@ -139,6 +139,8 @@
             "tabbed_explore_link_5_url": "shopify://pages/govx-id",
             "tabbed_explore_link_6_text": "CONTACT US",
             "tabbed_explore_link_6_url": "shopify://pages/about-us",
+            "tabbed_new_tab_label": "NEW",
+            "tabbed_new_tab_url": "shopify://products/jackalope",
             "tabbed_account_title": "ACCOUNT",
             "tabbed_account_link_text": "Log In / Sign Up",
             "tabbed_banner_image": "shopify://shop_images/BCK_Lifetime_Warranty.webp",
