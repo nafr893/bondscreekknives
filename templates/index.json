@@ -211,7 +211,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h1>BEST EVERYDAY CARRY KNIFE</h1>",
+                    "text": "<h1>JACKALOPE</h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -232,11 +232,38 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "text_JRwy6e": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<h4><strong>DROPS THURSDAY 3/17 AT 11AM EST</strong></h4>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "custom_label_Ef8JxU",
-                "text_c8kWGP"
+                "text_c8kWGP",
+                "text_JRwy6e"
               ]
             },
             "group_QkfPh7": {
@@ -312,7 +339,7 @@
       "name": "Hero Desktop",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/Badger_Homepage_v1.png",
+        "image_1": "shopify://shop_images/DSC00317-2.jpg",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
