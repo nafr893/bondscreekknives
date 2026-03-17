@@ -222,7 +222,7 @@
                   "type": "custom-label",
                   "name": "Custom label",
                   "settings": {
-                    "text": "JACKALOPE™",
+                    "text": "FUR | PHEASANT | TURKEY | TROUT",
                     "link": "",
                     "text_color": "#ffffff",
                     "bg_color": "#ffffff",
@@ -264,11 +264,37 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h4><strong>DROPS THURSDAY 3/17 AT 11AM EST</strong></h4>",
+                    "text": "<h1><strong>JACKALOPE</strong></h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h3",
+                    "type_preset": "h1",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_4dXbHx": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<h4><strong>DROPS THURSDAY 3/17 AT 11 AM EST</strong></h4>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -290,7 +316,8 @@
               "block_order": [
                 "custom_label_Ef8JxU",
                 "text_c8kWGP",
-                "text_JRwy6e"
+                "text_JRwy6e",
+                "text_4dXbHx"
               ]
             },
             "group_QkfPh7": {
