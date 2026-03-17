@@ -32,7 +32,7 @@
        on:click="tabbed-header-drawer/switchTab?tabId={{ tab }}"
        ref="tabButtons[]"
      >
-       {{ block_settings.tabbed_new_tab_label | default: 'NEW' }}
+       {{ tab | upcase }}
      </button>
    {% endif %}
  {% endfor %}
