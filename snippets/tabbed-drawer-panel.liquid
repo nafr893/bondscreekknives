@@ -50,6 +50,11 @@
              {{ block_settings.tabbed_shop_heading_3 }}
            </a>
          {% endif %}
+         {% if block_settings.tabbed_shop_heading_4 != blank %}
+           <a href="{{ block_settings.tabbed_shop_heading_4_url | default: '#' }}" class="tabbed-drawer__hero-link">
+             {{ block_settings.tabbed_shop_heading_4 }}
+           </a>
+         {% endif %}
        </div>
 
        {%- comment -%} Divider {%- endcomment -%}
