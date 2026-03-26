@@ -1167,32 +1167,6 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "text_xBtbQM": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h6><strong>BUILT BY HUNTERS</strong></h6><h6><strong>USED BY HUNTERS</strong></h6><h6></h6><h6></h6>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "custom",
-                "font": "var(--font-accent--family)",
-                "font_size": "1rem",
-                "line_height": "tight",
-                "letter_spacing": "normal",
-                "case": "uppercase",
-                "wrap": "balance",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#d16d00",
-                "corner_radius": 0,
-                "padding-block-start": 11,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
             "text_78UWWC": {
               "type": "text",
               "name": "t:names.description",
@@ -1221,7 +1195,6 @@
             }
           },
           "block_order": [
-            "text_xBtbQM",
             "text_78UWWC"
           ]
         },
