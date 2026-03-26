@@ -1171,7 +1171,7 @@
               "type": "text",
               "name": "t:names.description",
               "settings": {
-                "text": "<h3><strong>NOT DESIGNED IN AN OFFICE. </strong></h3><h3><strong>NOT TESTED IN THEORY.</strong></h3><h3><strong>EVERY KNIFE EARNS ITS PLACE IN THE FIELD BEFORE IT EVER  REACHES YOURS.</strong></h3>",
+                "text": "<h3>NOT DESIGNED IN AN OFFICE. </h3><h3>NOT TESTED IN THEORY.</h3><h3><strong>EVERY KNIFE EARNS ITS PLACE IN THE FIELD BEFORE IT EVER  REACHES YOURS.</strong></h3>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
