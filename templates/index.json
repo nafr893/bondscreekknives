@@ -684,9 +684,9 @@
             "video_url": "https://vimeo.com/1177072155?share=copy",
             "aspect_ratio": "56.25%",
             "desktop_width_percent": 100,
-            "autoplay": false,
-            "loop": false,
-            "controls": true,
+            "autoplay": true,
+            "loop": true,
+            "controls": false,
             "border_radius": 0,
             "background_color": "#000000"
           },
