@@ -392,8 +392,9 @@
       ],
       "name": "Hero Desktop",
       "settings": {
-        "media_type_1": "image",
+        "media_type_1": "video",
         "image_1": "shopify://shop_images/DSC00317-2.jpg",
+        "video_1": "shopify://files/videos/Turkey commercial.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
