@@ -106,41 +106,67 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 25
       }
     },
-    "1775223038b78735f8": {
+    "1775223914667412f2": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_bb61486_4TjRK7": {
-          "type": "ai_gen_block_bb61486",
+        "ai_gen_block_746f45e_R7MTQt": {
+          "type": "ai_gen_block_746f45e",
           "settings": {
-            "collection": "knives",
-            "button_text": "SHOP WHAT YOU ACTUALLY WANTED TO SEE, HERE.",
-            "button_padding_vertical": 12,
-            "button_padding_horizontal": 40,
-            "button_font_size": 18,
-            "button_font_weight": "700",
-            "button_text_transform": "uppercase",
-            "button_border_width": 0,
-            "button_border_radius": 0,
-            "button_background_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_border_color": "#000000",
-            "button_hover_background_color": "#333333",
-            "button_hover_text_color": "#ffffff",
-            "button_hover_border_color": "#333333",
+            "button_text": "SHOP WHAT YOU REALLY WANTED TO SEE, HERE.",
+            "button_link": "shopify://pages/homepage",
             "desktop_width_percent": 100,
-            "max_width": 1000,
-            "section_padding_top": 20,
-            "section_padding_bottom": 20
+            "button_height": 8,
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_background": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "border_width": 2,
+            "border_color": "#000000",
+            "border_hover_color": "#333333",
+            "border_radius": 0,
+            "font_size": 15,
+            "font_weight": "700",
+            "text_transform": "uppercase"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_bb61486_4TjRK7"
+        "ai_gen_block_746f45e_R7MTQt"
       ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "1775223038b78735f8": {
+      "type": "_blocks",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -324,13 +350,14 @@
         "padding-inline-start": 0,
         "padding-inline-end": 0,
         "color_scheme": "scheme-1",
-        "padding-block-start": 0,
+        "padding-block-start": 83,
         "padding-block-end": 32
       }
     }
   },
   "order": [
     "section",
+    "1775223914667412f2",
     "1775223038b78735f8",
     "main"
   ]
