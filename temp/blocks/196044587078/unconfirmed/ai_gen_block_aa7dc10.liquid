@@ -1,6 +1,169 @@
+{% doc %}
+  @prompt
+    Update the current AI-generated block to include a media picker setting that allows the merchant to choose either an image or a video from the Shopify media library, similar to how the header section works. The block should display whichever media is selected — if a video is chosen, play it (autoplay, muted, looped); if an image is chosen, display it. Use Shopify's native image_picker and video_url schema types so the merchant can browse and select from their uploaded library in the theme editor.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-media-block-{{ ai_gen_id }} {
+    position: relative;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    display: block;
+  }
+
+  .ai-media-container-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: {{ block.settings.border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-media-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .ai-media-video-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .ai-media-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    min-height: 400px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-media-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .ai-media-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-media-block-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-media-placeholder-{{ ai_gen_id }} {
+      min-height: 300px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-media-block-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-media-container-{{ ai_gen_id }}">
+    {% if block.settings.media_video != blank %}
+      <video
+        class="ai-media-video-{{ ai_gen_id }}"
+        autoplay
+        muted
+        loop
+        playsinline
+        {% if block.settings.media_video.alt %}
+          aria-label="{{ block.settings.media_video.alt | escape }}"
+        {% endif %}
+      >
+        {% for source in block.settings.media_video.sources %}
+          <source src="{{ source.url }}" type="{{ source.mime_type }}">
+        {% endfor %}
+      </video>
+    {% elsif block.settings.media_image != blank %}
+      <img
+        src="{{ block.settings.media_image | image_url: width: 2000 }}"
+        alt="{{ block.settings.media_image.alt | escape }}"
+        loading="lazy"
+        width="{{ block.settings.media_image.width }}"
+        height="{{ block.settings.media_image.height }}"
+        class="ai-media-image-{{ ai_gen_id }}"
+      >
+    {% else %}
+      <div class="ai-media-placeholder-{{ ai_gen_id }}">
+        {{ 'image' | placeholder_svg_tag }}
+        <div class="ai-media-empty-state-{{ ai_gen_id }}">
+          Select an image or video from your media library
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Media block",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "paragraph",
+      "content": "Choose either an image or a video. If both are selected, video will be displayed."
+    },
+    {
+      "type": "image_picker",
+      "id": "media_image",
+      "label": "Image"
+    },
+    {
+      "type": "video_url",
+      "id": "media_video",
+      "label": "Video",
+      "accept": ["youtube", "vimeo"]
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media block"
+    }
+  ]
+}
 {% endschema %}
