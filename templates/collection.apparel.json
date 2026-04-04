@@ -117,7 +117,7 @@
           "settings": {
             "button_text": "SHOP WHAT YOU REALLY WANTED TO SEE, HERE.",
             "button_link": "shopify://pages/homepage",
-            "desktop_width_percent": 100,
+            "desktop_width_percent": 95,
             "button_height": 8,
             "button_background": "#000000",
             "button_text_color": "#ffffff",
