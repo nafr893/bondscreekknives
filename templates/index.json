@@ -1353,7 +1353,7 @@
           "type": "_content-without-appearance",
           "static": true,
           "settings": {
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "space-between",
             "gap": 24
           },
@@ -1483,10 +1483,10 @@
             "button_bEGkPC": {
               "type": "button",
               "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
+                "label": "SHOP NOW",
+                "link": "shopify://collections/jackalope",
                 "open_in_new_tab": false,
-                "style_class": "link",
+                "style_class": "button",
                 "width": "fit-content",
                 "custom_width": 100,
                 "width_mobile": "fit-content",
