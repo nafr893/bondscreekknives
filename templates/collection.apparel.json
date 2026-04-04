@@ -116,7 +116,7 @@
           "type": "ai_gen_block_746f45e",
           "settings": {
             "button_text": "SHOP WHAT YOU REALLY WANTED TO SEE, HERE.",
-            "button_link": "shopify://pages/homepage",
+            "button_link": "shopify://collections/knives",
             "desktop_width_percent": 95,
             "button_height": 8,
             "button_background": "#000000",
