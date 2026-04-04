@@ -54,32 +54,6 @@
           },
           "blocks": {}
         },
-        "text_bRn7nn": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<h5>HUNTER BUILT. FIELD PROVEN.</h5>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
         "button_H9gpTf": {
           "type": "button",
           "name": "t:names.button",
@@ -99,7 +73,6 @@
       "block_order": [
         "custom_label_ckMW7T",
         "text_YLPk4p",
-        "text_bRn7nn",
         "button_H9gpTf"
       ],
       "name": "Hero Mobile",
