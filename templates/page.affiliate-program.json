@@ -731,13 +731,39 @@
                 "padding-inline-end": 0
               },
               "blocks": {
+                "text_A6QtiB": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<h2>Affiliate Program</h2>",
+                    "width": "fit-content",
+                    "max_width": "narrow",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
                 "text_qG9GNt": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h3><strong>RETURNS AND WARRANTY</strong></h3><p>We want you to love your Bonds Creek knife. If for <em>any reason</em> you’re not satisfied with your purchase, contact us within <strong>30 days</strong> of delivery and we’ll help make it right. This includes:</p><ul><li>Assistance with fit, finish, or usage questions</li><li>Options for exchange or store credit<br/>(<em>Note:</em> This period applies to unused knives returned in original condition — see <em>Returns</em> below.)</li></ul><h3><strong>2. Returns (Buyer’s Remorse / Unused Products)</strong></h3><p>We accept returns of unused knives within <strong>30 days</strong> of purchase for a <strong>refund or exchange</strong>.<br/>To qualify:</p><ul><li>Knife must be in <em>new, un-used condition</em></li><li>Original packaging, sheath, and all included accessories must be returned</li><li>Customer is responsible for return shipping</li></ul><p>To start a return:</p><ol><li>Contact support at <a><strong>BondsCreekKnives@gmail.com</strong></a></li><li>We’ll issue a return authorization and return shipping instructions</li><li>Once received and inspected, refunds will be issued to the original payment method</li></ol><p><em>Used knives or items not in original condition may not qualify for refund.</em></p><h3><strong>3. Lifetime Warranty (“Bonds Creek Promise”)</strong></h3><p>Every Bonds Creek knife is backed by our <strong>Lifetime Warranty</strong> against <em>defects in materials and craftsmanship</em>. This means:</p><ul><li>We guarantee your blade will perform as intended</li><li>If a manufacturing defect arises, we’ll repair or replace the knife at our discretion</li><li>Warranty is valid for the <em>original purchaser</em> only</li></ul><p>This warranty <strong>does not cover</strong>:</p><ul><li>Normal wear from use (e.g., dulling of the edge)</li><li>Damage due to misuse, abuse, or improper maintenance</li><li>Modifications or alterations made outside our workshop</li><li>Loss, theft, or cosmetic wear that does not affect function</li></ul><p>To file a warranty claim:</p><ol><li>Email <a><strong>BondsCreekKnives@gmail.com</strong></a> with photos and a description of issue</li><li>We’ll provide instructions on how to send the knife in for evaluation</li><li>After evaluation, we’ll repair or replace the knife and return it to you</li></ol><p>We may:</p><ul><li>Sharpen, rewrap handles, or refurbish surfaces</li><li>Replace components or entire knife if necessary<br/></li></ul><h3><strong>4. Generational Service & Sharpening</strong></h3><p>Like the best American-made knife brands, we offer ongoing service to keep your blade going strong. Under our <strong>Bonds Creek Promise</strong>:</p><ul><li>We <em>will</em> sharpen, service, and maintain your Bonds Creek knife for life</li><li>You can send it back anytime for edge restoration or maintenance (return shipping may apply)</li></ul><p><br/></p><h3><strong>5. How to Ship a Knife to Us</strong></h3><ul><li>Package your knife safely — blade covered and secure</li><li>Include your <strong>order number</strong>, contact info, and reason for service/return</li><li>Use a trackable shipping method — we aren’t responsible for items lost in transit</li></ul><p>Shipping address will be provided after you contact support.</p><h3><strong>6. Questions?</strong></h3><p>If anything is unclear or you want help before returning your knife, we’re here to help.<br/><a><strong>BondsCreekKnives@gmail.com</strong></a><br/>We’re committed to knives that work as hard as you do.</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
+                    "text": "<p>Do you have a website or blog interested in the Bonds Creek Knives Affiliate program? If so, apply here to join our program and earn a commission on every qualified buyer you send our way. We’ve worked hard to optimize our site for high conversions, which translates to more dollars in your pocket.</p><ul><li>5% Commission for Content Publishers/Coupon/Deal/Sub Affiliate networks on every sale</li><li>30-day cookie duration</li><li>High Average Order Value</li><li>Strong Website Conversion Rate</li><li>Excellent Marketing Materials</li></ul>",
+                    "width": "100%",
+                    "max_width": "none",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
@@ -759,12 +785,29 @@
                 }
               },
               "block_order": [
+                "text_A6QtiB",
                 "text_qG9GNt"
               ]
+            },
+            "button_J9JFPi": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Learn More and Apply Here",
+                "link": "https://www.avantlink.com/programs",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
-            "group_9f4LpH"
+            "group_9f4LpH",
+            "button_J9JFPi"
           ]
         }
       },
@@ -778,11 +821,11 @@
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
+        "gap": 45,
         "section_width": "page-width",
-        "section_height": "small",
+        "section_height": "medium",
         "section_height_custom": 50,
         "color_scheme": "",
         "background_media": "none",
