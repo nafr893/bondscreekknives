@@ -16,7 +16,7 @@
           "type": "custom-label",
           "name": "Custom label",
           "settings": {
-            "text": "FUR | PHEASANT |TURKEY | TROUT",
+            "text": "15% OFF ALL KNIVES",
             "link": "",
             "text_color": "#ffffff",
             "bg_color": "#ffffff",
@@ -32,11 +32,11 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h4>THE ULTIMATE TURKEY KNIFE</h4>",
+            "text": "<h4>TAX SEASON SALE</h4>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "h4",
+            "type_preset": "h3",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
             "line_height": "normal",
@@ -238,7 +238,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h1><strong>JACKALOPE</strong></h1>",
+                    "text": "<h1><strong>tax season sale</strong></h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -264,7 +264,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h4><strong>HUNTER BUILT. FIELD PROVEN.</strong></h4>",
+                    "text": "<h4><strong>15% off all knives</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
