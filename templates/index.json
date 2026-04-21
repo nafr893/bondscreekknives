@@ -16,7 +16,7 @@
           "type": "custom-label",
           "name": "Custom label",
           "settings": {
-            "text": "15% OFF ALL KNIVES",
+            "text": "TURKEY SEASON EXPERT",
             "link": "",
             "text_color": "#ffffff",
             "bg_color": "#ffffff",
@@ -32,7 +32,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h4>TAX SEASON SALE</h4>",
+            "text": "<h4>JACKALOPE</h4>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -238,7 +238,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h1><strong>tax season sale</strong></h1>",
+                    "text": "<h1><strong>jackalope</strong></h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -264,7 +264,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h4><strong>15% off all knives</strong></h4>",
+                    "text": "<h4><strong>the ultimate turkey season knife</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -367,7 +367,7 @@
       "name": "Hero Desktop",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/DSC00317-2.jpg",
+        "image_1": "shopify://shop_images/IMG_0757.heic",
         "video_1": "shopify://files/videos/Turkey commercial.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
