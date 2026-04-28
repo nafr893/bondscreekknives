@@ -96,7 +96,7 @@
         "ai_gen_block_bb61486_pKDac4": {
           "type": "ai_gen_block_bb61486",
           "settings": {
-            "collection": "",
+            "collection": "knives",
             "button_text": "SHOP WV MADE KNIVES",
             "button_padding_vertical": 20,
             "button_padding_horizontal": 100,
