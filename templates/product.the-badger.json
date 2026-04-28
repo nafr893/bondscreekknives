@@ -334,7 +334,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>{{ closest.product.metafields.custom.short_description | metafield_tag }}</p>",
+                    "text": "<p>Every Day Carry Specialist.</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
