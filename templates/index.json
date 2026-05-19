@@ -264,7 +264,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h4><strong>the ultimate turkey season knife</strong></h4>",
+                    "text": "<h4><strong>SMALL BLADE. BIG TROUT ENERGY.</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -367,7 +367,7 @@
       "name": "Hero Desktop",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/IMG_0757.heic",
+        "image_1": "shopify://shop_images/att.YGvWmrYprYpBCPOrVJiWy0FiPxF9fTTKce3XVa_4kWw_2.jpg",
         "video_1": "shopify://files/videos/Turkey commercial.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
