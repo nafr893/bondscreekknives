@@ -16,7 +16,7 @@
           "type": "custom-label",
           "name": "Custom label",
           "settings": {
-            "text": "TURKEY SEASON EXPERT",
+            "text": "SMALL BLADE. BIG TROUT ENERGY.",
             "link": "",
             "text_color": "#ffffff",
             "bg_color": "#ffffff",
@@ -77,8 +77,8 @@
       ],
       "name": "Hero Mobile",
       "settings": {
-        "media_type_1": "video",
-        "image_1": "shopify://shop_images/DSC00472_a717a29a-a491-4354-a97e-43f76fccab4c.jpg",
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/att.YGvWmrYprYpBCPOrVJiWy0FiPxF9fTTKce3XVa_4kWw_2.jpg",
         "video_1": "shopify://files/videos/Website Turkey Video.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
