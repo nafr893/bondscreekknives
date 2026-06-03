@@ -15,6 +15,7 @@
         "custom_label_ckMW7T": {
           "type": "custom-label",
           "name": "Custom label",
+          "disabled": true,
           "settings": {
             "text": "SMALL BLADE. BIG TROUT ENERGY.",
             "link": "",
@@ -31,6 +32,7 @@
         "text_YLPk4p": {
           "type": "text",
           "name": "t:names.heading",
+          "disabled": true,
           "settings": {
             "text": "<h4>JACKALOPE</h4>",
             "width": "fit-content",
@@ -57,6 +59,7 @@
         "button_H9gpTf": {
           "type": "button",
           "name": "t:names.button",
+          "disabled": true,
           "settings": {
             "label": "SHOP NOW",
             "link": "shopify://collections/jackalope",
@@ -68,17 +71,132 @@
             "custom_width_mobile": 100
           },
           "blocks": {}
+        },
+        "group_cPjcYy": {
+          "type": "group",
+          "name": "Promo Banner Text",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-end",
+            "gap": 0,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 38,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_4WcEJA": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>SHOP ALL KNIVES</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 25,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_RDKiqL": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2> </h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button_H7Rd3F": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Shop now",
+                "link": "shopify://collections/knives",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_4WcEJA",
+            "text_RDKiqL",
+            "button_H7Rd3F"
+          ]
         }
       },
       "block_order": [
         "custom_label_ckMW7T",
         "text_YLPk4p",
-        "button_H9gpTf"
+        "button_H9gpTf",
+        "group_cPjcYy"
       ],
       "name": "Hero Mobile",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/att.YGvWmrYprYpBCPOrVJiWy0FiPxF9fTTKce3XVa_4kWw_2.jpg",
+        "image_1": "shopify://shop_images/banner_tall_BCKK.jpg",
         "video_1": "shopify://files/videos/Website Turkey Video.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
@@ -114,7 +232,7 @@
       "blocks": {
         "group_Rick4y": {
           "type": "group",
-          "name": "t:names.group",
+          "name": "Promo Banner Text",
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -192,22 +310,6 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "custom_label_Ef8JxU": {
-                  "type": "custom-label",
-                  "name": "Custom label",
-                  "settings": {
-                    "text": "FUR | PHEASANT | TURKEY | TROUT",
-                    "link": "",
-                    "text_color": "#ffffff",
-                    "bg_color": "#ffffff",
-                    "bg_opacity": 15,
-                    "hover_bg_color": "#f2f2f2",
-                    "hover_bg_opacity": 20,
-                    "border_color": "#ffffff",
-                    "border_opacity": 100
-                  },
-                  "blocks": {}
-                },
                 "text_c8kWGP": {
                   "type": "text",
                   "name": "t:names.heading",
@@ -238,7 +340,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h1><strong>jackalope</strong></h1>",
+                    "text": "<h1><strong>Shop All Knives</strong></h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -259,39 +361,11 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
-                },
-                "text_4dXbHx": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<h4><strong>SMALL BLADE. BIG TROUT ENERGY.</strong></h4>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
                 }
               },
               "block_order": [
-                "custom_label_Ef8JxU",
                 "text_c8kWGP",
-                "text_JRwy6e",
-                "text_4dXbHx"
+                "text_JRwy6e"
               ]
             },
             "group_QkfPh7": {
@@ -339,7 +413,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "SHOP NOW",
-                    "link": "shopify://products/jackalope",
+                    "link": "shopify://collections/knives",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
@@ -359,15 +433,265 @@
             "group_4tJDka",
             "group_QkfPh7"
           ]
+        },
+        "group_aE7hkc": {
+          "type": "group",
+          "name": "Jackalope Banner Text",
+          "disabled": true,
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 25,
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_7UTaAG": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 15,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "custom_label_hBFRyz": {
+                  "type": "custom-label",
+                  "name": "Custom label",
+                  "settings": {
+                    "text": "FUR | PHEASANT | TURKEY | TROUT",
+                    "link": "",
+                    "text_color": "#ffffff",
+                    "bg_color": "#ffffff",
+                    "bg_opacity": 15,
+                    "hover_bg_color": "#f2f2f2",
+                    "hover_bg_opacity": 20,
+                    "border_color": "#ffffff",
+                    "border_opacity": 100
+                  },
+                  "blocks": {}
+                },
+                "text_GgzKTi": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_LQGHLi": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<h1><strong>jackalope</strong></h1>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h1",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_4hLjE8": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<h4><strong>SMALL BLADE. BIG TROUT ENERGY.</strong></h4>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "custom_label_hBFRyz",
+                "text_GgzKTi",
+                "text_LQGHLi",
+                "text_4hLjE8"
+              ]
+            },
+            "group_PPMXhw": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "button_jy9i3f": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "SHOP NOW",
+                    "link": "shopify://products/jackalope",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_jy9i3f"
+              ]
+            }
+          },
+          "block_order": [
+            "group_7UTaAG",
+            "group_PPMXhw"
+          ]
         }
       },
       "block_order": [
-        "group_Rick4y"
+        "group_Rick4y",
+        "group_aE7hkc"
       ],
       "name": "Hero Desktop",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/att.YGvWmrYprYpBCPOrVJiWy0FiPxF9fTTKce3XVa_4kWw_2.jpg",
+        "image_1": "shopify://shop_images/banner_wide_BCKK.jpg",
         "video_1": "shopify://files/videos/Turkey commercial.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
