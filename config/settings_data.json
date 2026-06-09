@@ -129,6 +129,16 @@
         "type": "shopify://apps/uppromote-affiliate/blocks/core-script/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
         "disabled": false,
         "settings": {}
+      },
+      "1967102994182284862": {
+        "type": "shopify://apps/paypal-pay-later-messaging/blocks/messaging/7f4cb7b9-066b-479a-a35c-56c0fddabee5",
+        "disabled": false,
+        "settings": {
+          "advanced_settings": false,
+          "product_locator": "",
+          "cart_locator": "",
+          "cart_drawer_locator": ""
+        }
       }
     },
     "color_schemes": {
