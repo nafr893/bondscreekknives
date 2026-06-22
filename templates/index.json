@@ -116,7 +116,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>SHOP ALL KNIVES</h2>",
+                "text": "<h2>BADGER</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -132,7 +132,33 @@
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 0,
-                "padding-block-end": 25,
+                "padding-block-end": 7,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_dQ4PYA": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>TOUGH AS HELL EVERY DAY CARRY</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 14,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -182,6 +208,7 @@
           },
           "block_order": [
             "text_4WcEJA",
+            "text_dQ4PYA",
             "text_RDKiqL",
             "button_H7Rd3F"
           ]
@@ -196,7 +223,7 @@
       "name": "Hero Mobile",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/banner_tall_BCKK.jpg",
+        "image_1": "shopify://shop_images/FullSizeRender_1b065b9a-532d-4125-b6dc-6453b3a7c6dc.jpg",
         "video_1": "shopify://files/videos/Website Turkey Video.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
@@ -336,11 +363,37 @@
                   },
                   "blocks": {}
                 },
+                "text_XeYHAR": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>TOUGH AS HELL EVERY DAY CARRY</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
                 "text_JRwy6e": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h1><strong>Shop All Knives</strong></h1>",
+                    "text": "<h1><strong>BADGER</strong></h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -365,6 +418,7 @@
               },
               "block_order": [
                 "text_c8kWGP",
+                "text_XeYHAR",
                 "text_JRwy6e"
               ]
             },
@@ -691,7 +745,7 @@
       "name": "Hero Desktop",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/banner_wide_BCKK.jpg",
+        "image_1": "shopify://shop_images/Badger_Homepage_v1.png",
         "video_1": "shopify://files/videos/Turkey commercial.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
