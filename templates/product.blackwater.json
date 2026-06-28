@@ -334,7 +334,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Born For Fur, Pheasant, Turkey, and Trout.</p>",
+                    "text": "<p>Refined for The Wild</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -959,7 +959,7 @@
                               "type": "custom-label",
                               "name": "Custom label",
                               "settings": {
-                                "text": "SMALL GAME | TURKEY | UPLAND BIRD | TROUT",
+                                "text": "Every Day Carry",
                                 "link": "",
                                 "text_color": "#000000",
                                 "bg_color": "#f9f9f9",
@@ -1168,7 +1168,7 @@
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
-                                "text": "<p><strong>KYDEX SHEATH</strong></p>",
+                                "text": "<p><strong>Polymer Sheath</strong></p>",
                                 "width": "fit-content",
                                 "max_width": "normal",
                                 "alignment": "left",
@@ -1194,7 +1194,7 @@
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
-                                "text": "<p>Kydex is a tough, lightweight thermoplastic built for impact resistance and durability.</p>",
+                                "text": "<p>We have designed and manufactured the ultimate EDC sheath. Flat face for easy belt attachment mounting. Extremely slim for ease of carry and concealment. Retention screw for a personalized drawing experience.</p>",
                                 "width": "100%",
                                 "max_width": "none",
                                 "alignment": "left",
@@ -1374,7 +1374,7 @@
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
-                                "text": "<p><strong>52100 STEEL</strong></p>",
+                                "text": "<p><strong>AEBL Stainless</strong></p>",
                                 "width": "fit-content",
                                 "max_width": "normal",
                                 "alignment": "left",
@@ -1400,7 +1400,7 @@
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
-                                "text": "<p>High-carbon steel known for exceptional edge retention, toughness, and easy sharpening.</p>",
+                                "text": "<p>AEBL is a tried and true high performance steel known for ease of sharpening and razor edge.</p>",
                                 "width": "100%",
                                 "max_width": "none",
                                 "alignment": "left",
