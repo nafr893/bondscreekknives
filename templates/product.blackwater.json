@@ -308,7 +308,7 @@
                   "type": "text",
                   "name": "Product title",
                   "settings": {
-                    "text": "<h1>BLACKWATER- COMING SOON</h1>",
+                    "text": "<h1>BLACKWATER</h1>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
