@@ -367,7 +367,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>AVAILABLE NOW</p>",
+                    "text": "<p>UPLAND EXPERT</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -393,7 +393,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h1><strong>BLACKWATER</strong></h1>",
+                    "text": "<h1><strong>JACKALOPE</strong></h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
