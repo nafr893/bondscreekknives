@@ -116,7 +116,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>JACKALOPE</h2>",
+                "text": "<h2>BLACKWATER</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -142,7 +142,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>UPLAND EXPERT</p>",
+                "text": "<p>RESTOCKED</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -223,7 +223,7 @@
       "name": "Hero Mobile",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/DSC00472_f14bf75e-d810-483c-bed7-e02876a972fb.jpg",
+        "image_1": "shopify://shop_images/Blackwater_Walnut2.png",
         "video_1": "shopify://files/videos/Website Turkey Video.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
