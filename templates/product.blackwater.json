@@ -440,7 +440,7 @@
               "type": "pair-with",
               "name": "Pair With",
               "settings": {
-                "heading": "OPTIONAL SHEATH ATTACHMENT TYPE",
+                "heading": "OPTIONAL SHEATH ATTACHMENT",
                 "button_label": "ADD",
                 "product_1": "tek-lok",
                 "product_2": "ulti-clip-2-2",
