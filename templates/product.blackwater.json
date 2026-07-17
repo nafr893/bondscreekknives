@@ -414,7 +414,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>PROPRIETARY POCKET CARRY SHEATH ATTACHMENT INCLUDED</p>",
+                "text": "<p><strong>PROPRIETARY POCKET CARRY SHEATH ATTACHMENT INCLUDED</strong></p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -429,7 +429,7 @@
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 100,
+                "padding-block-start": 38,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
