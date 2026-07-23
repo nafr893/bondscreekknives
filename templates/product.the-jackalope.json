@@ -410,22 +410,6 @@
               },
               "blocks": {}
             },
-            "pair_with_icM8iz": {
-              "type": "pair-with",
-              "name": "Pair With",
-              "settings": {
-                "heading": "SHEATH ATTACHMENT TYPE",
-                "button_label": "ADD",
-                "product_1": "tek-lok",
-                "product_2": "ulti-clip-2-2",
-                "product_3": "",
-                "product_4": "",
-                "product_5": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
               "settings": {
@@ -1452,7 +1436,7 @@
                     "text_a7ykTL": {
                       "type": "text",
                       "settings": {
-                        "text": "<p><strong>Blade Steel:</strong> 52100 High Carbon Steel<br/><strong>Blade Length:</strong> 3\"<br/><strong>Overall Length:</strong> 6.25\"<br/><strong>Blade Grind:</strong> Hollow Ground<br/><strong>Blade Spine Thickness:</strong> 1/8\"<br/><strong>Heat Treatment:</strong> 60–61 HRC<br/><strong>Knife Weight:</strong> 4.5 oz<br/><strong>Weight (Sheathed):</strong> 6.5 oz<br/><strong>Handle Material:</strong> G10<br/><strong>Handle Colors:</strong> Camo, Cinder, Blaze Orange<br/><strong>Blade Finish Options:</strong> Satin Black Powdercoat, Hi-Vis Orange Powdercoat<br/><strong>Spine:</strong> Textured<br/><strong>Sheath:</strong> Ambidextrous, Multi-Orientation Carry<br/><strong>Lanyard Hole:</strong> Yes (at Hilt)<br/><strong>Use:</strong> Small Game, Upland Bird, Turkey, Trout</p>",
+                        "text": "<p>4\" x 2\" x1\"<br/>Fine CBN Hone<br/>Leather Strop<br/>Internal Storage</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1492,7 +1476,6 @@
             "group_icgrde",
             "divider_VJhene",
             "variant_picker_R3rGDr",
-            "pair_with_icM8iz",
             "buy_buttons_eYQEYi",
             "group_MeJQJx",
             "accordion_4GbhFg"
