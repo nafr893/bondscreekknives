@@ -872,7 +872,7 @@
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
-                                "text": "<p><strong>BEST USED FOR:</strong></p>",
+                                "text": "<p><strong>BEST USED FOR: ALL BCK KNIVES</strong></p>",
                                 "width": "fit-content",
                                 "max_width": "normal",
                                 "alignment": "left",
