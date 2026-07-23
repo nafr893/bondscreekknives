@@ -116,7 +116,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>BLACKWATER</h2>",
+                "text": "<h2>FIELD SHARPENER</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -142,7 +142,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>RESTOCKED</p>",
+                "text": "<p>SHARPEN | STROP | GO</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -195,7 +195,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Shop now",
-                "link": "shopify://collections/knives",
+                "link": "shopify://products/bck-field-sharpener-coming-soon",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
@@ -223,7 +223,7 @@
       "name": "Hero Mobile",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/Blackwater_Walnut2.png",
+        "image_1": "shopify://shop_images/DSC00822.jpg",
         "video_1": "shopify://files/videos/Website Turkey Video.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
@@ -367,7 +367,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>UPLAND EXPERT</p>",
+                    "text": "<p>SHARPEN | STROP | GO</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -393,7 +393,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h1><strong>JACKALOPE</strong></h1>",
+                    "text": "<h1><strong>FIELD SHARPENER</strong></h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -467,7 +467,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "SHOP NOW",
-                    "link": "shopify://collections/knives",
+                    "link": "shopify://products/bck-field-sharpener-coming-soon",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
@@ -745,7 +745,7 @@
       "name": "Hero Desktop",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/DSC00472_f14bf75e-d810-483c-bed7-e02876a972fb.jpg",
+        "image_1": "shopify://shop_images/DSC00822.jpg",
         "video_1": "shopify://files/videos/Turkey commercial.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
