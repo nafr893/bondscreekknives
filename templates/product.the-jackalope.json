@@ -938,27 +938,7 @@
                             "padding-inline-start": 0,
                             "padding-inline-end": 0
                           },
-                          "blocks": {
-                            "custom_label_WfTUpL": {
-                              "type": "custom-label",
-                              "name": "Custom label",
-                              "settings": {
-                                "text": "SMALL GAME | TURKEY | UPLAND BIRD | TROUT",
-                                "link": "",
-                                "text_color": "#000000",
-                                "bg_color": "#f9f9f9",
-                                "bg_opacity": 100,
-                                "hover_bg_color": "#f9f9f9",
-                                "hover_bg_opacity": 100,
-                                "border_color": "#888888",
-                                "border_opacity": 100
-                              },
-                              "blocks": {}
-                            }
-                          },
-                          "block_order": [
-                            "custom_label_WfTUpL"
-                          ]
+                          "blocks": {}
                         }
                       },
                       "block_order": [
