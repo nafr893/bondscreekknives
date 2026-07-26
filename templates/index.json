@@ -116,7 +116,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>FIELD SHARPENER</h2>",
+                "text": "<h2>CAMP SEASON SALE</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -142,7 +142,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>SHARPEN | STROP | GO</p>",
+                "text": "<p>15% OFF ALL KNIVES</p><p>DISCOUNT AUTOMATICALLY APPLIED AT CHECKOUT</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -223,7 +223,7 @@
       "name": "Hero Mobile",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/DSC00822.jpg",
+        "image_1": "shopify://shop_images/DSC00567.jpg",
         "video_1": "shopify://files/videos/Website Turkey Video.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
@@ -367,7 +367,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>SHARPEN | STROP | GO</p>",
+                    "text": "<p>15% OFF  ALL KNIVES</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -393,11 +393,37 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h1><strong>FIELD SHARPENER</strong></h1>",
+                    "text": "<h1><strong>Camp season sale</strong></h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
                     "type_preset": "h1",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_PFptcQ": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p><strong>DISCOUNT AUTOMATICALLY APPLIED AT CHECKOUT</strong></p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -419,7 +445,8 @@
               "block_order": [
                 "text_c8kWGP",
                 "text_XeYHAR",
-                "text_JRwy6e"
+                "text_JRwy6e",
+                "text_PFptcQ"
               ]
             },
             "group_QkfPh7": {
@@ -745,7 +772,7 @@
       "name": "Hero Desktop",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/DSC00822.jpg",
+        "image_1": "shopify://shop_images/DSC00567.jpg",
         "video_1": "shopify://files/videos/Turkey commercial.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
