@@ -116,7 +116,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>CAMP SEASON SALE</h2>",
+                "text": "<h2>ULTIMATE EDC</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -142,7 +142,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>15% OFF ALL KNIVES</p><p>DISCOUNT AUTOMATICALLY APPLIED AT CHECKOUT</p>",
+                "text": "<p>BADGER</p><p>TOUGH AS HELL | READY TO WORK</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -367,11 +367,11 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>15% OFF  ALL KNIVES</p>",
+                    "text": "<p>BADGER</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h5",
+                    "type_preset": "h4",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -393,7 +393,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h1><strong>Camp season sale</strong></h1>",
+                    "text": "<h1><strong>ultimate edc</strong></h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -419,7 +419,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p><strong>DISCOUNT AUTOMATICALLY APPLIED AT CHECKOUT</strong></p>",
+                    "text": "<p><strong>TOUGH AS HELL | READY TO WORK</strong></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
