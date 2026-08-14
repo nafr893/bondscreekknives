@@ -112,8 +112,6 @@
         "settings": {
           "greeting_message": "",
           "button_color": "#000000",
-          "secondary_color": "#FFFFFF",
-          "ternary_color": "#6A6A6A",
           "button_icon": "chat_bubble",
           "button_text": "chat_with_us",
           "button_horizontal_position": "bottom_right",
@@ -130,15 +128,10 @@
         "disabled": false,
         "settings": {}
       },
-      "1967102994182284862": {
-        "type": "shopify://apps/paypal-pay-later-messaging/blocks/messaging/7f4cb7b9-066b-479a-a35c-56c0fddabee5",
-        "disabled": true,
-        "settings": {
-          "advanced_settings": false,
-          "product_locator": "",
-          "cart_locator": "",
-          "cart_drawer_locator": ""
-        }
+      "12439146293631897289": {
+        "type": "shopify://apps/blockify-fraud-filter/blocks/app_embed/2e3e0ba5-0e70-447a-9ec5-3bf76b5ef12e",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
