@@ -857,7 +857,7 @@
         "text_jEmbN7": {
           "type": "text",
           "settings": {
-            "text": "<h1>JOIN THE WAITLIST</h1>",
+            "text": "<h1>RETRO SERIES COMING SOON</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -980,7 +980,7 @@
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "page-width",
