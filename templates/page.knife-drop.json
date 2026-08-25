@@ -963,23 +963,14 @@
     "section_hx7pGL": {
       "type": "section",
       "blocks": {
-        "custom_liquid_9fLknx": {
-          "type": "custom-liquid",
-          "name": "t:names.custom_liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"klaviyo-form-W4Gfp2\"></div>"
-          },
-          "blocks": {}
-        },
         "klaviyo_email_marketing_sms_form_embed_block_zxBkHf": {
           "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
           "settings": {
-            "formId": "<div class=\"klaviyo-form-W4Gfp2\"></div>"
+            "formId": "W4Gfp2"
           }
         }
       },
       "block_order": [
-        "custom_liquid_9fLknx",
         "klaviyo_email_marketing_sms_form_embed_block_zxBkHf"
       ],
       "name": "t:names.custom_section",
