@@ -419,7 +419,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p><strong>MAXIMUM EDGE | MAXIMUM ATTITUDE</strong></p>",
+                    "text": "<p><strong>ONLY 50 AVAILABLE</strong></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
