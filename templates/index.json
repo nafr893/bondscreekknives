@@ -367,7 +367,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>THE 80'S JUST DREW FIRST BLOOD</p>",
+                    "text": "<p>LIMITED RUN</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -419,7 +419,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p><strong>ONLY 50 AVAILABLE</strong></p>",
+                    "text": "<p><strong>ONLY A FEW AVAILABLE</strong></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
