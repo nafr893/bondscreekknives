@@ -191,32 +191,6 @@
     },
     "blocks_BRLhkC": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_4620407_fdPJyq": {
-          "type": "ai_gen_block_4620407",
-          "settings": {
-            "button_text": "Check Out our Best Sellers here",
-            "desktop_width_percent": 100,
-            "button_color": "#DF5A0D",
-            "button_hover_color": "#333333",
-            "button_text_color": "#ffffff",
-            "button_hover_text_color": "#ffffff",
-            "border_color": "#000000",
-            "border_hover_color": "#333333",
-            "border_width": 2,
-            "border_radius": 4,
-            "font_size": 16,
-            "font_weight": "700",
-            "text_uppercase": true,
-            "padding_vertical": 16,
-            "padding_horizontal": 80
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_4620407_fdPJyq"
-      ],
       "name": "Wide button",
       "settings": {
         "content_direction": "column",
