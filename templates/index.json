@@ -1862,7 +1862,7 @@
               "type": "button",
               "settings": {
                 "label": "SHOP NOW",
-                "link": "shopify://products/bck-field-sharpener-coming-soon",
+                "link": "shopify://collections/knives",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
