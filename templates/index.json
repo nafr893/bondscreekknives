@@ -1718,7 +1718,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/DSC00820.jpg",
+            "image": "shopify://shop_images/DSC00062.jpg",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
@@ -1740,7 +1740,7 @@
               "type": "text",
               "name": "t:names.caption",
               "settings": {
-                "text": "<p>SHARPEN | STROP | GO</p>",
+                "text": "<p>PREDATOR | SCAVENGER</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1805,7 +1805,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>FIELD SHARPENER</h2>",
+                    "text": "<h2>ARCHERY  GEAR BREAKDOWN</h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1830,7 +1830,7 @@
                 "text_PLY8Ey": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><br/>Keep your edge razor sharp wherever the adventure takes you. Our compact Field Sharpener includes a fine grit CBN stone, premium leather strop, honing oil, diamond emulsion spray, and cleaning rag in one affordable kit.<br/><br/></p>",
+                    "text": "<p>You invest in the bow, sight, stabilizers, broadheads, and drop-away to make the shot count. A dependable knife finishes the job. When the moment comes, it isn’t an accessory—it’s one of the most important pieces of gear in your pack.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
