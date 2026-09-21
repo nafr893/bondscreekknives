@@ -462,6 +462,12 @@
               },
               "block_order": []
             },
+            "klaviyo_email_marketing_sms_form_embed_block_DHYmHy": {
+              "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+              "settings": {
+                "formId": "RFUpUQ"
+              }
+            },
             "group_MeJQJx": {
               "type": "group",
               "name": "t:names.group",
@@ -1517,6 +1523,7 @@
             "variant_picker_R3rGDr",
             "pair_with_icM8iz",
             "buy_buttons_eYQEYi",
+            "klaviyo_email_marketing_sms_form_embed_block_DHYmHy",
             "group_MeJQJx",
             "accordion_4GbhFg",
             "video_U7bWTH"
