@@ -208,13 +208,7 @@
          {% endif %}
        {% endif %}
     
-       {% render 'slideshow-slide',
-         index: forloop.index,
-         children: children,
-         class: class | strip,
-         style: style,
-         attributes: attributes | strip
-       %}
+       {% render 'slideshow-slide', index: forloop.index, children: children, class: class, style: style, attributes: attributes %}
      {% endfor %}
 
 
@@ -235,15 +229,7 @@
  {% if sorted_media.size > 1 %}
    {% capture controls %}
      {% if render_slideshow_controls %}
-       {%- render 'slideshow-controls',
-         style: slideshow_controls_style,
-         item_count: item_count,
-         thumbnails: combined_media,
-         controls_on_media: controls_on_media,
-         pagination_position: pagination_position,
-         aspect_ratio: block.settings.aspect_ratio,
-         class: slideshow_controls_class | default: 'desktop-controls'
-       -%}
+       {%- render 'slideshow-controls', style: slideshow_controls_style, item_count: item_count, thumbnails: combined_media, controls_on_media: controls_on_media, pagination_position: pagination_position, aspect_ratio: block.settings.aspect_ratio, class: slideshow_controls_class, default: 'desktop-controls' -%}
      {% endif %}
 
 
@@ -1054,3 +1040,36 @@
 
 
 
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {% render 'slideshow-slide',
+             index: forloop.index,
+             children: children,
+             class: class | strip,
+             style: style,
+             attributes: attributes | strip
+           %}
+  to: "{% render 'slideshow-slide', index: forloop.index, children: children, class:
+    class, style: style, attributes: attributes %}"
+  position: 7053..7177
+- from: |-
+    {%- render 'slideshow-controls',
+             style: slideshow_controls_style,
+             item_count: item_count,
+             thumbnails: combined_media,
+             controls_on_media: controls_on_media,
+             pagination_position: pagination_position,
+             aspect_ratio: block.settings.aspect_ratio,
+             class: slideshow_controls_class | default: 'desktop-controls'
+           -%}
+  to: "{%- render 'slideshow-controls', style: slideshow_controls_style, item_count:
+    item_count, thumbnails: combined_media, controls_on_media: controls_on_media,
+    pagination_position: pagination_position, aspect_ratio: block.settings.aspect_ratio,
+    class: slideshow_controls_class, default: 'desktop-controls' -%}"
+  position: 7697..8002
+{% endcomment %}
