@@ -17,8 +17,8 @@
         "announcement_BxgCk9": {
           "type": "_announcement",
           "settings": {
-            "text": "<strong>FREE SHIPPING OVER $200</strong>",
-            "link": "",
+            "text": "<strong>NEXT DROP | 10-15-2026</strong>",
+            "link": "shopify://pages/bck-knife-launch-sign-up",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
             "weight": "",
