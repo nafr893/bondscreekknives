@@ -1,0 +1,396 @@
+<script
+  src="{{ 'countdown-timer.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{% liquid
+  assign days_s = block.settings.duration_days | times: 86400
+  assign hours_s = block.settings.duration_hours | times: 3600
+  assign minutes_s = block.settings.duration_minutes | times: 60
+  assign duration_ms = days_s | plus: hours_s | plus: minutes_s | times: 1000
+
+  assign on_expire = block.settings.on_expire
+  if block.settings.mode == 'date' and on_expire == 'restart'
+    assign on_expire = 'zeros'
+  endif
+%}
+
+<countdown-timer
+  class="countdown-timer spacing-style countdown-timer--{{ block.settings.style }}"
+  style="
+    --countdown-justify: {{ block.settings.alignment }};
+    --countdown-number-size: {{ block.settings.number_size }}px;
+    --countdown-label-size: {{ block.settings.label_size }}px;
+    --countdown-gap: {{ block.settings.gap }}px;
+    {% render 'spacing-style', settings: block.settings %}
+  "
+  data-block-id="{{ block.id }}"
+  data-mode="{{ block.settings.mode }}"
+  data-date="{{ block.settings.launch_date | escape }}"
+  data-time="{{ block.settings.launch_time | escape }}"
+  data-offset="{{ block.settings.timezone_offset }}"
+  data-duration="{{ duration_ms }}"
+  data-on-expire="{{ on_expire }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="countdown-timer__units" data-countdown-timer role="timer" aria-live="off">
+    {%- assign units = 'days,hours,minutes,seconds' | split: ',' -%}
+    {%- for unit in units -%}
+      {%- unless unit == 'days' and block.settings.show_days == false -%}
+        {%- if block.settings.show_separators and forloop.first == false -%}
+          {%- unless forloop.index == 2 and block.settings.show_days == false -%}
+            <span class="countdown-timer__separator" aria-hidden="true">:</span>
+          {%- endunless -%}
+        {%- endif -%}
+        <div class="countdown-timer__unit">
+          <span class="countdown-timer__number" data-unit="{{ unit }}">00</span>
+          {%- if block.settings.show_labels -%}
+            {%- assign label_key = 'label_' | append: unit -%}
+            <span class="countdown-timer__label">{{ block.settings[label_key] }}</span>
+          {%- endif -%}
+        </div>
+      {%- endunless -%}
+    {%- endfor -%}
+  </div>
+
+  {%- if on_expire == 'message' -%}
+    <div class="countdown-timer__expired rte" data-countdown-expired hidden>
+      {{ block.settings.expired_message }}
+    </div>
+  {%- endif -%}
+</countdown-timer>
+
+{% stylesheet %}
+  .countdown-timer {
+    display: block;
+    width: 100%;
+  }
+
+  .countdown-timer__units {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: var(--countdown-justify, center);
+    gap: var(--countdown-gap, 16px);
+  }
+
+  .countdown-timer__unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .countdown-timer__number,
+  .countdown-timer__separator {
+    font-family: var(--font-heading--family);
+    font-weight: var(--font-heading--weight);
+    font-size: clamp(24px, 8vw, var(--countdown-number-size, 48px));
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .countdown-timer__label {
+    margin-top: 0.5em;
+    font-size: var(--countdown-label-size, 12px);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.75;
+  }
+
+  .countdown-timer--boxed .countdown-timer__unit {
+    padding: 0.75em 1em;
+    border: var(--style-border-width, 1px) solid rgb(var(--color-foreground-rgb) / var(--opacity-15, 0.15));
+    border-radius: var(--style-border-radius-inputs, 4px);
+    background: rgb(var(--color-foreground-rgb) / var(--opacity-5, 0.05));
+    min-width: 4.5em;
+  }
+
+  .countdown-timer__expired {
+    text-align: var(--countdown-justify, center);
+  }
+
+  .countdown-timer[data-invalid] {
+    outline: 2px dashed rgb(var(--color-foreground-rgb) / 0.3);
+    outline-offset: 4px;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Countdown timer",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "mode",
+      "label": "Timer type",
+      "options": [
+        { "value": "date", "label": "Count down to a launch date" },
+        { "value": "duration", "label": "Fixed length per visitor" }
+      ],
+      "default": "date"
+    },
+    {
+      "type": "text",
+      "id": "launch_date",
+      "label": "Launch date",
+      "info": "Format: YYYY-MM-DD (e.g. 2026-12-01)",
+      "default": "2026-12-01",
+      "visible_if": "{{ block.settings.mode == 'date' }}"
+    },
+    {
+      "type": "text",
+      "id": "launch_time",
+      "label": "Launch time",
+      "info": "24-hour format: HH:MM (e.g. 09:00 or 18:30)",
+      "default": "09:00",
+      "visible_if": "{{ block.settings.mode == 'date' }}"
+    },
+    {
+      "type": "select",
+      "id": "timezone_offset",
+      "label": "Time zone",
+      "info": "During daylight saving time, use one hour later (e.g. US Eastern is UTC-4 in summer).",
+      "options": [
+        { "value": "-12:00", "label": "UTC-12" },
+        { "value": "-11:00", "label": "UTC-11" },
+        { "value": "-10:00", "label": "UTC-10 (Hawaii)" },
+        { "value": "-09:00", "label": "UTC-9 (Alaska)" },
+        { "value": "-08:00", "label": "UTC-8 (US Pacific)" },
+        { "value": "-07:00", "label": "UTC-7 (US Mountain)" },
+        { "value": "-06:00", "label": "UTC-6 (US Central)" },
+        { "value": "-05:00", "label": "UTC-5 (US Eastern)" },
+        { "value": "-04:00", "label": "UTC-4 (Atlantic)" },
+        { "value": "-03:00", "label": "UTC-3" },
+        { "value": "-02:00", "label": "UTC-2" },
+        { "value": "-01:00", "label": "UTC-1" },
+        { "value": "+00:00", "label": "UTC±0 (London)" },
+        { "value": "+01:00", "label": "UTC+1 (Central Europe)" },
+        { "value": "+02:00", "label": "UTC+2" },
+        { "value": "+03:00", "label": "UTC+3" },
+        { "value": "+04:00", "label": "UTC+4" },
+        { "value": "+05:00", "label": "UTC+5" },
+        { "value": "+06:00", "label": "UTC+6" },
+        { "value": "+07:00", "label": "UTC+7" },
+        { "value": "+08:00", "label": "UTC+8" },
+        { "value": "+09:00", "label": "UTC+9" },
+        { "value": "+10:00", "label": "UTC+10" },
+        { "value": "+11:00", "label": "UTC+11" },
+        { "value": "+12:00", "label": "UTC+12" },
+        { "value": "+13:00", "label": "UTC+13" },
+        { "value": "+14:00", "label": "UTC+14" }
+      ],
+      "default": "-05:00",
+      "visible_if": "{{ block.settings.mode == 'date' }}"
+    },
+    {
+      "type": "range",
+      "id": "duration_days",
+      "label": "Days",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "default": 1,
+      "visible_if": "{{ block.settings.mode == 'duration' }}"
+    },
+    {
+      "type": "range",
+      "id": "duration_hours",
+      "label": "Hours",
+      "min": 0,
+      "max": 23,
+      "step": 1,
+      "default": 0,
+      "visible_if": "{{ block.settings.mode == 'duration' }}"
+    },
+    {
+      "type": "range",
+      "id": "duration_minutes",
+      "label": "Minutes",
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "default": 0,
+      "visible_if": "{{ block.settings.mode == 'duration' }}"
+    },
+    {
+      "type": "paragraph",
+      "content": "Each visitor's timer starts on their first view and is remembered in their browser. In the theme editor it restarts on every reload.",
+      "visible_if": "{{ block.settings.mode == 'duration' }}"
+    },
+    {
+      "type": "select",
+      "id": "on_expire",
+      "label": "When the timer ends",
+      "options": [
+        { "value": "zeros", "label": "Show 00:00:00:00" },
+        { "value": "hide", "label": "Hide the timer" },
+        { "value": "message", "label": "Show a message" },
+        { "value": "restart", "label": "Restart (fixed length only)" }
+      ],
+      "default": "zeros"
+    },
+    {
+      "type": "richtext",
+      "id": "expired_message",
+      "label": "Message",
+      "default": "<p>We're live!</p>",
+      "visible_if": "{{ block.settings.on_expire == 'message' }}"
+    },
+    {
+      "type": "header",
+      "content": "Display"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_days",
+      "label": "Show days",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_labels",
+      "label": "Show labels",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "label_days",
+      "label": "Days label",
+      "default": "Days",
+      "visible_if": "{{ block.settings.show_labels and block.settings.show_days }}"
+    },
+    {
+      "type": "text",
+      "id": "label_hours",
+      "label": "Hours label",
+      "default": "Hours",
+      "visible_if": "{{ block.settings.show_labels }}"
+    },
+    {
+      "type": "text",
+      "id": "label_minutes",
+      "label": "Minutes label",
+      "default": "Minutes",
+      "visible_if": "{{ block.settings.show_labels }}"
+    },
+    {
+      "type": "text",
+      "id": "label_seconds",
+      "label": "Seconds label",
+      "default": "Seconds",
+      "visible_if": "{{ block.settings.show_labels }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_separators",
+      "label": "Show colon separators",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "Style",
+      "options": [
+        { "value": "plain", "label": "Plain" },
+        { "value": "boxed", "label": "Boxed" }
+      ],
+      "default": "boxed"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "label": "Number size",
+      "min": 20,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "label_size",
+      "label": "Label size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 12,
+      "visible_if": "{{ block.settings.show_labels }}"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "Left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "Right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown timer",
+      "category": "t:categories.basic"
+    }
+  ]
+}
+{% endschema %}
