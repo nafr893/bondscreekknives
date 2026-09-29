@@ -123,6 +123,91 @@
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 12,
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": false,
+                    "color_scheme": "scheme-3",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 10,
+                    "padding-inline-end": 10
+                  },
+                  "blocks": {
+                    "text_MAVPBQ": {
+                      "type": "text",
+                      "name": "t:names.text",
+                      "settings": {
+                        "text": "<p><em><strong>LIMITED RUN</strong></em></p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": true,
+                        "background_color": "#000000",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "review_daTXPw": {
+                      "type": "review",
+                      "name": "t:names.product_review_stars",
+                      "settings": {
+                        "stars_style": "shaded",
+                        "show_number": true,
+                        "rating_color": "primary",
+                        "type_preset": "paragraph",
+                        "width": "fit-content",
+                        "alignment": "left"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_MAVPBQ",
+                    "review_daTXPw"
+                  ]
+                },
+                "group_LLem4q": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-end",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -151,89 +236,14 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {
-                    "review_daTXPw": {
-                      "type": "review",
-                      "name": "t:names.product_review_stars",
-                      "settings": {
-                        "stars_style": "shaded",
-                        "show_number": true,
-                        "rating_color": "primary",
-                        "type_preset": "paragraph",
-                        "width": "fit-content",
-                        "alignment": "left"
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "review_daTXPw"
-                  ]
-                },
-                "group_LLem4q": {
-                  "type": "group",
-                  "name": "t:names.group",
-                  "settings": {
-                    "content_direction": "row",
-                    "vertical_on_mobile": false,
-                    "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
-                    "align_baseline": false,
-                    "horizontal_alignment_flex_direction_column": "flex-start",
-                    "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
-                    "width": "fit-content",
-                    "custom_width": 100,
-                    "width_mobile": "fit-content",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "custom_height": 100,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
-                    "background_media": "none",
-                    "video_position": "cover",
-                    "background_image_position": "cover",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "toggle_overlay": false,
-                    "overlay_color": "#00000026",
-                    "overlay_style": "solid",
-                    "gradient_direction": "to top",
-                    "link": "",
-                    "open_in_new_tab": false,
-                    "placeholder": "",
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {
-                    "icon_waq4Wz": {
-                      "type": "icon",
-                      "name": "t:names.icon",
-                      "settings": {
-                        "icon": "price_tag",
-                        "image_upload": "shopify://shop_images/AdobeStock_104221787.jpg",
-                        "width": 24,
-                        "link": "",
-                        "open_in_new_tab": false,
-                        "background_color": "rgba(0,0,0,0)",
-                        "border_color": "#000000",
-                        "border_weight": 0,
-                        "container_width": 48,
-                        "container_height": 48
-                      },
-                      "blocks": {}
-                    },
                     "text_HqhLKA": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>MADE IN USA</p>",
+                        "text": "<p>HANDMADE IN USA</p>",
                         "width": "fit-content",
                         "max_width": "normal",
-                        "alignment": "left",
+                        "alignment": "right",
                         "type_preset": "custom",
                         "font": "var(--font-body--family)",
                         "font_size": "0.625rem",
@@ -251,11 +261,28 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
+                    },
+                    "icon_waq4Wz": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "icon": "price_tag",
+                        "image_upload": "shopify://shop_images/AdobeStock_104221787.jpg",
+                        "width": 24,
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "background_color": "rgba(0,0,0,0)",
+                        "border_color": "#000000",
+                        "border_weight": 0,
+                        "container_width": 48,
+                        "container_height": 48
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
-                    "icon_waq4Wz",
-                    "text_HqhLKA"
+                    "text_HqhLKA",
+                    "icon_waq4Wz"
                   ]
                 }
               },
@@ -334,7 +361,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>SH</p>",
+                    "text": "<p>Every Day Carry Specialist</p>",
                     "width": "100%",
                     "max_width": "none",
                     "alignment": "left",
@@ -461,6 +488,12 @@
                 }
               },
               "block_order": []
+            },
+            "klaviyo_email_marketing_sms_form_embed_block_DHYmHy": {
+              "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+              "settings": {
+                "formId": "RFUpUQ"
+              }
             },
             "group_MeJQJx": {
               "type": "group",
@@ -959,7 +992,7 @@
                               "type": "custom-label",
                               "name": "Custom label",
                               "settings": {
-                                "text": "SMALL GAME | TURKEY | UPLAND BIRD | TROUT",
+                                "text": "EVERYDAY WORK",
                                 "link": "",
                                 "text_color": "#000000",
                                 "bg_color": "#f9f9f9",
@@ -1452,7 +1485,7 @@
                     "text_a7ykTL": {
                       "type": "text",
                       "settings": {
-                        "text": "<p><strong>Blade Steel:</strong> 52100 High Carbon Steel<br/><strong>Blade Length:</strong> 3\"<br/><strong>Overall Length:</strong> 7.125\"<br/><strong>Blade Grind:</strong> Hollow Ground<br/><strong>Blade Spine Thickness:</strong> 1/8\"<br/><strong>Heat Treatment:</strong> 60–61 HRC<br/><strong>Knife Weight:</strong> 4.5 oz<br/><strong>Weight (Sheathed):</strong> 6.5 oz<br/><strong>Handle Material:</strong> G10<br/><strong>Handle Colors:</strong> Camo, Cinder, Blaze Orange<br/><strong>Blade Finish Options:</strong> Satin Black Powdercoat, Hi-Vis Orange Powdercoat<br/><strong>Spine:</strong> Textured<br/><strong>Sheath:</strong> Ambidextrous, Multi-Orientation Carry<br/><strong>Lanyard Hole:</strong> Yes (at Hilt)<br/><strong>Use:</strong> Small Game, Upland Bird, Turkey, Trout</p>",
+                        "text": "<p><strong>Blade Steel:</strong> 52100 High Carbon Steel<br/><strong>Blade Length:</strong> 2.5\"<br/><strong>Overall Length:</strong> 6.125\"<br/><strong>Blade Grind:</strong> Saber Ground<br/><strong>Blade Spine Thickness:</strong> 1/8\"<br/><strong>Heat Treatment:</strong> 60–61 HRC<br/><strong>Knife Weight:</strong> 3 oz<br/><strong>Weight (Sheathed):</strong> 5 oz<br/><strong>Handle Material:</strong> G10<br/><strong>Handle Colors:</strong> Pirate Richlite<br/><strong>Blade Finish Options:</strong> Cursed Gold Powdercoat<br/><strong>Spine:</strong> Textured<br/><strong>Sheath:</strong> Ambidextrous, Multi-Orientation Carry<br/><strong>Lanyard Hole:</strong> Yes (at Hilt)<br/><strong>Use:</strong> Everyday Carry / Work Knife</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1485,6 +1518,29 @@
                 "accordion_row_eDbTVe",
                 "accordion_row_BnPFNL"
               ]
+            },
+            "video_U7bWTH": {
+              "type": "video",
+              "name": "t:names.video",
+              "settings": {
+                "source": "url",
+                "video_url": "https://www.youtube.com/watch?v=R1nk14G4NRE&t=3s",
+                "video_autoplay": false,
+                "video_loop": true,
+                "alt": "",
+                "custom_width": 100,
+                "custom_width_mobile": 100,
+                "aspect_ratio": "16/9",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -1494,8 +1550,10 @@
             "variant_picker_R3rGDr",
             "pair_with_icM8iz",
             "buy_buttons_eYQEYi",
+            "klaviyo_email_marketing_sms_form_embed_block_DHYmHy",
             "group_MeJQJx",
-            "accordion_4GbhFg"
+            "accordion_4GbhFg",
+            "video_U7bWTH"
           ]
         }
       },
