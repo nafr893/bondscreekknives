@@ -803,6 +803,110 @@
         "padding-block-end": 72
       }
     },
+    "section_bccpHC": {
+      "type": "section",
+      "blocks": {
+        "text_Bzmki7": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>NEXT KNIFE DROP</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "countdown_timer_jrC7Hg": {
+          "type": "countdown-timer",
+          "name": "Countdown timer",
+          "settings": {
+            "mode": "date",
+            "launch_date": "2026-10-15",
+            "launch_time": "19:00",
+            "timezone_offset": "-05:00",
+            "duration_days": 1,
+            "duration_hours": 0,
+            "duration_minutes": 0,
+            "on_expire": "zeros",
+            "expired_message": "<p>We're live!</p>",
+            "show_days": true,
+            "show_labels": true,
+            "label_days": "Days",
+            "label_hours": "Hours",
+            "label_minutes": "Mins",
+            "label_seconds": "Secs",
+            "show_separators": true,
+            "number_font": "inter_n7",
+            "number_weight": "900",
+            "style": "plain",
+            "alignment": "center",
+            "number_size": 80,
+            "label_size": 24,
+            "gap": 8,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "klaviyo_email_marketing_sms_form_embed_block_hLPT8m": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "TXaXAz"
+          }
+        }
+      },
+      "block_order": [
+        "text_Bzmki7",
+        "countdown_timer_jrC7Hg",
+        "klaviyo_email_marketing_sms_form_embed_block_hLPT8m"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "small",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "product_list_fa6P9H": {
       "type": "product-list",
       "blocks": {
@@ -2492,6 +2596,7 @@
   "order": [
     "hero_jVaWmY",
     "hero_ccfRJE",
+    "section_bccpHC",
     "product_list_fa6P9H",
     "section_ptQME4",
     "17745221318300ca9b",
