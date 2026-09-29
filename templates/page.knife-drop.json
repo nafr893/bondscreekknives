@@ -927,6 +927,7 @@
         "text_JF8f6i",
         "button_UPKe33"
       ],
+      "disabled": true,
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
