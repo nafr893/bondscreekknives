@@ -970,32 +970,6 @@
               },
               "blocks": {}
             },
-            "text_Td7RxJ": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p><strong>FREE SHIPPING ON ORDERS OVER $200</strong></p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
             "product_list_button_MWeP9V": {
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
@@ -1014,7 +988,6 @@
           },
           "block_order": [
             "product_list_text_YFtzcL",
-            "text_Td7RxJ",
             "product_list_button_MWeP9V"
           ]
         },
@@ -1295,7 +1268,7 @@
                 "text_xCXMe9": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>PROVEN IN BLOOD, MUD, AND COLD MORNINGS</strong></p>",
+                    "text": "<p><strong>PROVEN IN BLOOD, MUD, AND COLD MORNINGS</strong></p><p><strong>FREE SHIPPING ON ORDERS OVER $200</strong></p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
