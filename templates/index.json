@@ -72,6 +72,32 @@
           },
           "blocks": {}
         },
+        "text_Xn4Ug6": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p><strong>FREE SHIPPING ON ORDERS OVER $200</strong></p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 100,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "group_cPjcYy": {
           "type": "group",
           "name": "Promo Banner Text",
@@ -218,6 +244,7 @@
         "custom_label_ckMW7T",
         "text_YLPk4p",
         "button_H9gpTf",
+        "text_Xn4Ug6",
         "group_cPjcYy"
       ],
       "name": "Hero Mobile",
@@ -1466,7 +1493,7 @@
                 "text_qzY4yn": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>BUILT TO WORK</h2>",
+                    "text": "<h2>LIFETIME WARRANTY</h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
