@@ -11,8 +11,8 @@
   "current": {
     "logo": "shopify://shop_images/Bonds_Creek_Black_Logo_v23.png",
     "logo_inverse": "shopify://shop_images/bonds_creek_knives_logo_white_v2.png",
-    "logo_height": 36,
-    "logo_height_mobile": 28,
+    "logo_height": 59,
+    "logo_height_mobile": 47,
     "type_body_font": "roboto_n4",
     "type_subheading_font": "ibm_plex_mono_n4",
     "type_heading_font": "inter_n7",
