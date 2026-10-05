@@ -1,0 +1,295 @@
+<script
+  src="{{ 'product-option-checkboxes.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{% liquid
+  assign property_name = block.settings.property_name | strip
+  if property_name == blank
+    assign property_name = block.settings.heading | strip
+  endif
+  if property_name == blank
+    assign property_name = 'Option'
+  endif
+
+  assign option_keys = 'option_1,option_2,option_3,option_4,option_5' | split: ','
+%}
+
+<product-option-checkboxes
+  class="product-option-checkboxes spacing-style"
+  style="{% render 'spacing-style', settings: block.settings %}"
+  data-block-id="{{ block.id }}"
+  data-form-id="BuyButtons-ProductForm-{{ section.id }}"
+  data-property-name="{{ property_name | escape }}"
+  {% if block.settings.required %}
+    data-required
+  {% endif %}
+  {% if block.settings.allow_multiple %}
+    data-multiple
+  {% endif %}
+  {{ block.shopify_attributes }}
+>
+  <fieldset class="product-option-checkboxes__fieldset">
+    {%- if block.settings.heading != blank -%}
+      <legend class="product-option-checkboxes__heading {{ block.settings.heading_preset }}">
+        {{- block.settings.heading -}}
+        {%- if block.settings.required %}
+          <span class="product-option-checkboxes__required" aria-hidden="true">*</span>
+        {%- endif -%}
+      </legend>
+    {%- endif -%}
+
+    <div class="product-option-checkboxes__options">
+      {%- for key in option_keys -%}
+        {%- assign label = block.settings[key] | strip -%}
+        {%- if label != blank -%}
+          <label class="product-option-checkboxes__option">
+            <input
+              type="checkbox"
+              class="product-option-checkboxes__input"
+              value="{{ label | escape }}"
+              {% if block.settings.required %}
+                aria-describedby="OptionCheckboxesError-{{ block.id }}"
+              {% endif %}
+            >
+            <span class="product-option-checkboxes__box" aria-hidden="true"></span>
+            <span class="product-option-checkboxes__label">{{ label }}</span>
+          </label>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if block.settings.required -%}
+      <p
+        class="product-option-checkboxes__error"
+        id="OptionCheckboxesError-{{ block.id }}"
+        role="alert"
+        data-error
+        hidden
+      >
+        {{ block.settings.error_message }}
+      </p>
+    {%- endif -%}
+  </fieldset>
+</product-option-checkboxes>
+
+{% stylesheet %}
+  .product-option-checkboxes {
+    display: block;
+    width: 100%;
+  }
+
+  .product-option-checkboxes__fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  .product-option-checkboxes__heading {
+    padding: 0;
+    margin-bottom: 0.75em;
+  }
+
+  .product-option-checkboxes__required {
+    margin-left: 0.15em;
+  }
+
+  .product-option-checkboxes__options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+  }
+
+  .product-option-checkboxes__option {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .product-option-checkboxes__input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+
+  .product-option-checkboxes__box {
+    position: relative;
+    flex: none;
+    width: 1.25em;
+    height: 1.25em;
+    border: 1.5px solid currentColor;
+    border-radius: 3px;
+    transition: background-color 0.15s ease;
+  }
+
+  .product-option-checkboxes__box::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    width: 0.35em;
+    height: 0.7em;
+    border: solid var(--color-background, #fff);
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+  }
+
+  .product-option-checkboxes__input:checked + .product-option-checkboxes__box {
+    background-color: currentColor;
+  }
+
+  .product-option-checkboxes__input:checked + .product-option-checkboxes__box::after {
+    opacity: 1;
+  }
+
+  .product-option-checkboxes__input:focus-visible + .product-option-checkboxes__box {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  .product-option-checkboxes__error {
+    margin: 0.75em 0 0;
+    color: var(--color-error, #c00);
+    font-size: 0.9em;
+  }
+
+  .product-option-checkboxes--error .product-option-checkboxes__box {
+    border-color: var(--color-error, #c00);
+  }
+
+  /* Signal that add to cart is blocked until an option is chosen. */
+  product-form-component[data-required-options-missing] [ref='addToCartButton'] {
+    opacity: 0.5;
+  }
+
+  /* Express checkout buttons can't be intercepted, so disable them until an option is chosen. */
+  product-form-component[data-required-options-missing] .accelerated-checkout-block {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Option checkboxes",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Range Finder Size"
+    },
+    {
+      "type": "select",
+      "id": "heading_preset",
+      "label": "Heading style",
+      "options": [
+        { "value": "h3", "label": "Heading 3" },
+        { "value": "h4", "label": "Heading 4" },
+        { "value": "h5", "label": "Heading 5" },
+        { "value": "h6", "label": "Heading 6" },
+        { "value": "paragraph", "label": "Paragraph" }
+      ],
+      "default": "h5"
+    },
+    {
+      "type": "header",
+      "content": "Checkboxes",
+      "info": "Leave a checkbox blank to hide it."
+    },
+    {
+      "type": "text",
+      "id": "option_1",
+      "label": "Checkbox 1",
+      "default": "Medium"
+    },
+    {
+      "type": "text",
+      "id": "option_2",
+      "label": "Checkbox 2",
+      "default": "Large"
+    },
+    {
+      "type": "text",
+      "id": "option_3",
+      "label": "Checkbox 3"
+    },
+    {
+      "type": "text",
+      "id": "option_4",
+      "label": "Checkbox 4"
+    },
+    {
+      "type": "text",
+      "id": "option_5",
+      "label": "Checkbox 5"
+    },
+    {
+      "type": "header",
+      "content": "Behavior"
+    },
+    {
+      "type": "checkbox",
+      "id": "required",
+      "label": "Require a selection to add to cart",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "error_message",
+      "label": "Error message",
+      "default": "Please select a size before adding to cart.",
+      "visible_if": "{{ block.settings.required }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "allow_multiple",
+      "label": "Allow more than one selection",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "property_name",
+      "label": "Order label",
+      "info": "Name shown next to the selection on the cart and order (e.g. \"Range Finder Size: Medium\"). Defaults to the heading."
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Option checkboxes",
+      "category": "t:categories.product"
+    }
+  ]
+}
+{% endschema %}
