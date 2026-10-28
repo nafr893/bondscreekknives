@@ -837,7 +837,7 @@
           "name": "Countdown timer",
           "settings": {
             "mode": "date",
-            "launch_date": "2026-10-15",
+            "launch_date": "2026-10-29",
             "launch_time": "19:00",
             "timezone_offset": "-05:00",
             "duration_days": 1,
