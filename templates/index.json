@@ -116,7 +116,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>PREDATOR</h2>",
+                "text": "<h3>FDE TOPO PREDATOR</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -142,7 +142,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>FROM FIELD TO FREEZER</p>",
+                "text": "<p>LIMITED SERIES</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -195,7 +195,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Shop now",
-                "link": "shopify://products/predator-cinder",
+                "link": "shopify://products/fde-topo-predator",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
@@ -223,7 +223,7 @@
       "name": "Hero Mobile",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/BCK--2_2d5c921b-2e59-48de-90b9-b172e23734a7.webp",
+        "image_1": "shopify://shop_images/IMG_0546.heic",
         "video_1": "shopify://files/videos/Website Turkey Video.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
@@ -393,7 +393,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h1><strong>PREDATOR</strong></h1>",
+                    "text": "<h1><strong>FDE TOPO PREDATOR</strong></h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -419,7 +419,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p><strong>FROM FIELD TO FREEZER</strong></p>",
+                    "text": "<p><strong>LIMITED SERIES</strong></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -494,7 +494,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "SHOP NOW",
-                    "link": "shopify://products/predator-cinder",
+                    "link": "shopify://products/fde-topo-predator",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
@@ -772,7 +772,7 @@
       "name": "Hero Desktop",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/BCK-0178_1.jpg",
+        "image_1": "shopify://shop_images/IMG_0546.heic",
         "video_1": "shopify://files/videos/Turkey commercial.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
