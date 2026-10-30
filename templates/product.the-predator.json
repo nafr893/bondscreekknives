@@ -151,9 +151,26 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {
+                    "custom_label_Ea3JkH": {
+                      "type": "custom-label",
+                      "name": "Custom label",
+                      "settings": {
+                        "text": "LIMITED INVENTORY",
+                        "link": "",
+                        "text_color": "#FFFFFF",
+                        "bg_color": "#D00000",
+                        "bg_opacity": 100,
+                        "hover_bg_color": "#f2f2f2",
+                        "hover_bg_opacity": 100,
+                        "border_color": "#000000",
+                        "border_opacity": 100
+                      },
+                      "blocks": {}
+                    },
                     "review_daTXPw": {
                       "type": "review",
                       "name": "t:names.product_review_stars",
+                      "disabled": true,
                       "settings": {
                         "stars_style": "shaded",
                         "show_number": true,
@@ -166,6 +183,7 @@
                     }
                   },
                   "block_order": [
+                    "custom_label_Ea3JkH",
                     "review_daTXPw"
                   ]
                 },
