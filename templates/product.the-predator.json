@@ -431,6 +431,7 @@
             "pair_with_icM8iz": {
               "type": "pair-with",
               "name": "Pair With",
+              "disabled": true,
               "settings": {
                 "heading": "PAIR WITH",
                 "button_label": "ADD",
