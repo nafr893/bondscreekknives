@@ -837,8 +837,8 @@
           "name": "Countdown timer",
           "settings": {
             "mode": "date",
-            "launch_date": "2026-10-29",
-            "launch_time": "19:00",
+            "launch_date": "2026-11-26",
+            "launch_time": "13:00",
             "timezone_offset": "-05:00",
             "duration_days": 1,
             "duration_hours": 0,
@@ -1822,7 +1822,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/DSC00062.jpg",
+            "image": "shopify://shop_images/DSC00045.jpg",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
@@ -1909,7 +1909,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>ARCHERY  GEAR BREAKDOWN</h2>",
+                    "text": "<h2>DEER SEASON GEAR BREAKDOWN</h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1931,10 +1931,36 @@
                   },
                   "blocks": {}
                 },
+                "text_h7gRL7": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Deer season gear breakdown: the Bonds Creek Predator is built for the work that starts after the shot. Its four-inch cutting edge and comfortable, dependable design make it a solid companion for field dressing and processing your deer. Add it to your pack alongside your shells, grunt call, Little Debbies and head into the season ready for the hunt and what comes after.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
                 "text_PLY8Ey": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>You invest in the bow, sight, stabilizers, broadheads, and drop-away to make the shot count. A dependable knife finishes the job. When the moment comes, it isn’t an accessory—it’s one of the most important pieces of gear in your pack.</p>",
+                    "text": "",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1959,6 +1985,7 @@
               },
               "block_order": [
                 "text_Y6i6JT",
+                "text_h7gRL7",
                 "text_PLY8Ey"
               ]
             },
