@@ -116,7 +116,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h3>FDE TOPO PREDATOR</h3>",
+                "text": "<h3>DEER SEASON</h3><h3></h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -132,7 +132,7 @@
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 82,
-                "padding-block-end": 7,
+                "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -142,7 +142,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>LIMITED SERIES</p>",
+                "text": "<p>ESSENTIALS</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -195,7 +195,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Shop now",
-                "link": "shopify://products/fde-topo-predator",
+                "link": "shopify://collections/knives",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
@@ -223,7 +223,7 @@
       "name": "Hero Mobile",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/IMG_0546.jpg",
+        "image_1": "shopify://shop_images/BCK-0178.jpg",
         "video_1": "shopify://files/videos/Website Turkey Video.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
@@ -393,7 +393,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h1><strong>FDE TOPO PREDATOR</strong></h1>",
+                    "text": "<h1><strong>DEER SEASON</strong></h1>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -419,7 +419,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p><strong>LIMITED SERIES</strong></p>",
+                    "text": "<p><strong>ESSENTIALS</strong></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -494,7 +494,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "SHOP NOW",
-                    "link": "shopify://products/fde-topo-predator",
+                    "link": "shopify://collections/knives",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
@@ -772,7 +772,7 @@
       "name": "Hero Desktop",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/IMG_0546.heic",
+        "image_1": "shopify://shop_images/BCK-0178.jpg",
         "video_1": "shopify://files/videos/Turkey commercial.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
