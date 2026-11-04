@@ -838,7 +838,7 @@
           "settings": {
             "mode": "date",
             "launch_date": "2026-11-26",
-            "launch_time": "13:00",
+            "launch_time": "12:00",
             "timezone_offset": "-05:00",
             "duration_days": 1,
             "duration_hours": 0,
