@@ -494,7 +494,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "SHOP NOW",
-                    "link": "shopify://collections/knives",
+                    "link": "shopify://products/bonds-creek-edc-center-presale",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
